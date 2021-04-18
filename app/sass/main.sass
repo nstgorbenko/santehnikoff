@@ -1,0 +1,1300 @@
+
+@import "../font/calibri/calibri.css";
+
+*,
+*::before,
+*::after 
+      box-sizing: border-box
+
+
+
+ul[class],
+ol[class] 
+      padding: 0
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd 
+      margin: 0
+      font-family: 'Calibri', sans-serif
+
+
+
+body 
+      min-height: 100vh
+      scroll-behavior: smooth
+      text-rendering: optimizeSpeed
+      line-height: 1.5
+      font-family: 'Calibri', sans-serif
+
+
+
+ul[class],
+ol[class] 
+      list-style: none
+      font-family: 'Calibri', sans-serif
+
+a:not([class])
+  text-decoration-skip-ink: auto
+  font-family: 'Calibri', sans-serif
+a
+      text-decoration: none
+      font-family: 'Calibri', sans-serif
+
+
+img
+      max-width: 100%
+      display: block
+
+
+
+article > * + *
+      margin-top: 1em
+      font-family: 'Calibri', sans-serif
+
+
+
+input,
+button,
+textarea,
+select 
+      font: inherit
+      font-family: 'Calibri', sans-serif
+
+
+@media (prefers-reduced-motion: reduce)
+      * 
+            animation-duration: 0.01ms !important
+            animation-iteration-count: 1 !important
+            transition-duration: 0.01ms !important
+            scroll-behavior: auto !important
+
+.container
+      display: block
+      margin: auto
+      max-width: 1600px
+      padding: 0 40px
+      font-family: 'Calibri', sans-serif
+
+.blue-btn
+      background: #117CFB
+      border-radius: 3px
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 17px
+
+      display: flex
+      align-items: center
+      justify-content: center
+      letter-spacing: 0.02em
+      width: 147px
+      height: 39px
+      color: #FFFFFF
+      transition: all 0.3s ease
+      &:hover
+            opacity: .8
+
+.btn-light
+
+      width: 143px
+      height: 40px
+      background: #FFFFFF
+      border: 1px solid #E0E0E0
+      border-radius: 4px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 12px
+      letter-spacing: 0.02em
+
+      color: #333333
+      transition: all 0.3s ease
+      &:hover
+            opacity: .8
+            background: #c5c5c530
+
+.form-controll
+      width: 100%
+      position: relative
+      
+      &--label
+            position: absolute
+            top: -23px
+            left: 0
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 17px
+            color: #767676
+      &--input
+            background: #FFFFFF
+            border: 1px solid #949494
+            box-sizing: border-box
+            border-radius: 4px
+            height: 60px
+            width: 100%
+            padding-left: 16px
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 19px
+            &::placeholder
+                  
+
+                  color: #CACACA
+            &:focus
+                  outline: none
+                  border: 1px solid #949494
+
+            &.error-input     
+                  border-color: #ff010170
+
+      &--btn
+            border: none
+            cursor: pointer
+            &:focus
+                  outline: none
+
+
+
+.header
+      background-color: #fff
+
+.header-top
+      display: flex
+      height: 120px
+      align-items: center
+
+
+
+.header--logo
+      margin-right: 140px
+      transition: all 0.3s ease
+      &:hover
+            opacity: .8
+
+.header-right
+      margin-left: auto
+
+.header-nav
+      display: flex
+      align-items: center
+
+      &--item
+            font-style: normal
+            font-weight: normal
+            font-size: 15px
+            line-height: 18px
+
+            letter-spacing: 0.095em
+            text-transform: uppercase
+            margin-right: 30px
+            color: #3E3E3E
+            transition: all 0.3s ease
+            &:hover
+                  opacity: .8
+            &:last-child
+                  margin-right: none
+
+            &-parent
+                  margin-right: 70px
+
+            &-name
+                  position: relative
+                  font-size: 15px
+                  line-height: 25px
+
+                  letter-spacing: 0.095em
+
+                  &::after
+                        content: ""
+                        display: block
+                        position: absolute
+                        background-image: url(../img/menu-arrow.png)
+                        width: 10px
+                        height: 6px
+                        margin: auto
+                        top: 0
+                        bottom: 0
+                        right: -20px      
+
+.header-right
+      display: flex
+      align-items: center
+
+.header--phone
+      font-style: normal
+      font-weight: normal
+      font-size: 20px
+      line-height: 24px
+      letter-spacing: 0.02em
+      text-transform: uppercase
+      margin-right: 30px
+      color: #2255CE
+      transition: all 0.3s ease
+      &:hover
+            opacity: .8
+
+.header--btn
+
+.footer
+      
+      background: #fff
+
+.footer-top
+      border-top: 1px solid #E4E4E4;
+      padding: 80px 0 62px
+
+.footer-top .container
+      display: flex
+
+.footer-column-left
+      max-width: 247px
+      margin-right: 146px
+
+.footer--logo
+      margin-bottom: 19px
+      display: block
+
+.footer--description
+      font-style: normal
+      font-weight: 300
+      font-size: 16px
+      line-height: 21px
+      /* or 21px */
+      margin-bottom: 32px
+      color: #6B6B6B
+
+.footer-column-center
+      display: flex
+      width: 100%
+
+      
+
+.footer-column--nav
+      display: flex
+      flex-direction: column
+      width: 100%
+      max-width: 196px
+      &__hidden
+            visibility: hidden
+      &-top 
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 19px
+            letter-spacing: 0.08em
+            text-transform: uppercase
+            margin-bottom: 25px
+            color: #232323
+
+      &-link
+            margin-bottom: 13px
+            font-style: normal
+            font-weight: 300
+            font-size: 16px
+            line-height: 26px
+            color: #3C3C3C
+
+
+
+.footer-column-right
+      margin-left: auto
+      width: 100%
+      max-width: 175px
+.footer-column--connect
+      display: flex
+      flex-direction: column
+      
+      &-title
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 19px
+            letter-spacing: 0.08em
+            text-transform: uppercase
+            margin-bottom: 20px
+            color: #232323
+      &-phone
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            line-height: 22px
+            letter-spacing: 0.02em
+            text-transform: uppercase
+            margin-bottom: 6px
+            color: #333333
+
+
+      &-mail
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 19px
+            /* or 19px */
+
+            letter-spacing: 0.02em
+
+            color: #333333
+
+      &-faq
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 22px
+            color: #333333
+            margin-top: 37px
+            margin-bottom: 12px
+
+      &-btn svg
+            margin-right: 10px
+
+.footer-bottom
+      padding: 19px 0 26px
+      border-top: 1px solid #E6E6E6
+
+      .container
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+.footer-bottom--copy
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 19px
+   
+
+      color: #828282
+
+.footer-bottom--develop
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      &-top
+            font-style: normal
+            font-weight: normal
+            font-size: 12px
+            line-height: 19px
+
+            text-align: center
+
+            color: #828282
+
+      
+.footer-bottom--politick
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 19px
+
+      color: #828282
+
+.social-links
+      display: flex
+      align-items: center
+      &--link
+            display: block
+            margin-right: 16px
+            &:last-child
+                  margin-right: 0
+
+.main-screen
+      // min-height: calc( 100vh + 100px )
+      overflow: hidden
+      position: relative
+      &--tag
+            font-style: normal
+            font-weight: 300
+            font-size: 24px
+            line-height: 30px
+            letter-spacing: 0.555em
+            text-transform: uppercase
+            color: #131313
+            margin-bottom: 65px
+      &--name
+            font-style: normal
+            font-weight: bold
+            font-size: 120px
+            line-height: 113px
+            text-transform: uppercase
+            color: #131313
+            margin-bottom: 17px
+            display: flex
+            flex-direction: column
+            
+            &-blue
+                  color: #2255CE
+
+      &--desc
+            font-style: normal
+            font-weight: normal
+            font-size: 36px
+            line-height: 44px
+            color: #131313
+            margin-bottom: 70px
+
+
+      &--btn
+            width: 230px
+            height: 61px
+            font-size: 18px
+            line-height: 22px
+
+      &-img--right, &-img--bottom
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            background-repeat: no-repeat
+      &-img--right
+            background-position: top right
+      &-img--bottom
+            background-position: bottom
+            background-size: contain
+
+.main-screen-wrap
+      display: flex
+      align-items: center
+      min-height: 1000px
+
+.main-screen-desc
+      display: flex
+      flex-direction: column   
+      position: relative
+      z-index: 10  
+
+.default-block
+      overflow: hidden
+      margin-top: 90px
+      margin-bottom: 180px
+      position: relative
+      &--center-img
+            position: absolute
+            width: 100%
+            height: 100%
+            background-repeat: no-repeat
+            margin: auto
+            top: 0
+            bottom: 0
+            right: 0
+            background-position: center right
+            z-index: -1
+      &--name
+            font-style: normal
+            font-weight: bold
+            font-size: 80px
+            line-height: 65px
+            color: #2255CE
+            max-width: 716px
+
+      &--right
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            &-link
+                  font-style: normal
+                  font-weight: normal
+                  font-size: 20px
+                  line-height: 24px
+                  margin-right: 16px
+                  color: #117CFB
+
+            &-arrow
+                  width: 52px
+                  height: 52px
+
+                  &--left
+                        transform: rotate(180deg)
+                        margin-right: 20px
+
+
+.default-block--top
+      display: flex
+      align-items: center
+      justify-content: space-between 
+      margin-bottom: 120px
+
+.price-service
+      display: flex
+      margin-bottom: 120px
+      &--left, &--right
+            width: 50%
+            img 
+                  width: 100%
+                  max-width: 641px
+
+      &--right
+            display: flex
+            flex-direction: column
+            align-items: self-start
+            justify-content: center
+            max-width: 507px
+
+
+
+
+      &--name
+            font-style: normal
+            font-weight: bold
+            font-size: 26px
+            line-height: 31px
+            letter-spacing: 0.04em
+            text-transform: uppercase
+            margin-bottom: 54px
+            color: #333333
+
+      &--price
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 100%
+            margin-bottom: 32px
+
+            &-name
+                  font-style: normal
+                  font-weight: normal
+                  font-size: 20px
+                  line-height: 30px
+                  color: #333333
+                  max-width: 350px
+
+            &-value
+                  font-style: normal
+                  font-weight: bold
+                  font-size: 24px
+                  line-height: 38px
+                  color: #333333
+                  
+
+.reviews
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+.review
+      background: #FFFFFF
+      border: 1px solid #F2F2F2
+      border-radius: 2px
+      padding: 30px
+      width: 100%
+      max-width: 488px
+      min-height: 374px
+
+      &--top
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding-bottom: 29px
+            border-bottom: 1px solid #F2F2F2
+            margin-bottom: 22px
+
+      &--date
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 26px
+            color: #575757
+            margin-bottom: 6px
+
+      &--user-name
+            font-style: normal
+            font-weight: normal
+            font-size: 24px
+            line-height: 38px
+            color: #202020
+            margin-bottom: 7px
+
+      &--rating
+            display: flex
+            align-items: center
+
+      &--drop
+            width: 14px
+            height: 18px
+            margin-right: 8px
+            &.active svg path
+                  fill: #117CFB
+
+      &--top-img img
+            width: 78px
+            height: 78px
+            border-radius: 50%
+
+      &--text
+            font-style: normal
+            font-weight: 300
+            font-size: 20px
+            line-height: 32px
+            color: #333333
+
+.feedback-block
+      width: 100%
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      min-height: 586px
+      position: relative
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center bottom
+      overflow: hidden  
+      &--center-bg
+            position: absolute
+            height: 100%
+            width: 100%
+            background-position: center right
+            background-repeat: no-repeat
+            // z-index: 3
+
+.feedback
+      
+      &--form-wrap
+            position: relative
+            z-index: 2
+            background: #fff
+            padding: 46px 65px 61px
+            width: 100%
+            max-width: 786px
+
+      &--title-form
+            font-style: normal
+            font-weight: bold
+            font-size: 50px
+            line-height: 45px
+            color: #2255CE
+            margin-bottom: 20px
+      
+      &--desc-form
+            font-style: normal
+            font-weight: normal
+            font-size: 20px
+            line-height: 20px
+            letter-spacing: 0.02em
+            color: #3F3F3F
+            margin-bottom: 46px
+
+      &--form
+            display: flex
+            position: relative
+            z-index: 4
+      &--form-btn
+            width: 100%
+            max-width: 300px
+            height: 100%
+            font-style: normal
+            font-weight: bold
+            font-size: 20px
+            line-height: 20px
+            display: flex
+            align-items: center
+            justify-content: center
+            letter-spacing: 0.02em
+            color: #FFFFFF
+            margin-left: auto
+            background-color: linear-gradient(91.79deg, #2255CE 10.67%, #117CFB 88.08%)
+
+.our-employees
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+      &--btn
+            width: 241px
+            height: 60px
+            background: linear-gradient(91.79deg, #2255CE 10.67%, #117CFB 88.08%)
+            font-style: normal
+            font-weight: bold
+            font-size: 20px
+            line-height: 100%
+            letter-spacing: 0.02em
+            color: #FFFFFF
+            margin: 45px auto
+
+
+.staff-person
+      display: flex
+      flex-direction: column
+      width: 100%
+      height: 100%
+      max-width: 340px
+      &--tag
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 19px
+            letter-spacing: 0.04em
+            text-transform: uppercase
+            margin-bottom: 8px
+            color: #2255CE
+
+      &--name
+            font-style: normal
+            font-weight: normal
+            font-size: 32px
+            line-height: 38px
+            color: #1C1C1C
+            margin-bottom: 28px
+      &--img
+            width: 100%
+            height: 330px
+            overflow: hidden
+
+            img
+                  width: 100%
+.text-block
+      margin-bottom: 140px
+.seo-text
+      max-width: 1028px
+      overflow: hidden
+      max-height: 220px
+      position: relative
+      &::before
+            content: ""
+            position: absolute
+            bottom: 0
+            width: 100%
+            height: 150px
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
+      &--title
+            font-style: normal
+            font-weight: normal
+            font-size: 50px
+            line-height: 49px
+            margin-bottom: 35px
+            color: #2255CE
+      p, span
+            font-style: normal
+            font-weight: 300
+            font-size: 20px
+            line-height: 29px
+            margin-bottom: 20px
+            color: #333442
+
+      &--btn-show
+            font-style: normal
+            font-weight: normal
+            font-size: 20px
+            line-height: 32px
+            text-decoration-line: underline
+            color: #117CFB
+            margin-top: 30px
+            display: block
+
+.top-info-service
+      .container
+            position: relative
+
+      &--bg
+            height: 100%
+            width: 100%
+            position: absolute
+            top: 0
+            background-repeat: no-repeat
+      &--center
+            position: relative
+            min-height: 350px
+            z-index: 5
+            display: flex
+            align-items: center
+            justify-content: space-between
+            max-width: 1250px
+            margin: auto
+
+      &--tag
+            font-style: normal
+            font-weight: 300
+            font-size: 20px
+            line-height: 25px
+            letter-spacing: 0.2em
+            text-transform: uppercase
+            margin-bottom: 33px
+            display: block
+            color: #131313
+      &--name
+            font-style: normal
+            font-weight: bold
+            font-size: 75px
+            line-height: 67px
+            text-transform: uppercase
+            max-width: 750px
+            letter-spacing: 0.01em
+            color: #131313
+
+            &-blue
+                  color: #2255CE
+                  margin-top: 13px
+                  display: block
+
+      &--btn
+            width: 230px
+            height: 61px
+            font-style: normal
+            font-weight: bold
+            font-size: 18px
+            line-height: 22px
+           
+            color: #FFFFFF
+            background: #117CFB
+            border-radius: 4px
+
+
+
+.breadcrumbs
+      margin: 80px 0 75px
+
+      &--item
+            font-style: normal
+            font-weight: 300
+            font-size: 20px
+            line-height: 32px
+            color: #117CFB
+            &::after
+                  content: "/"
+                  color: #000
+                  font-size: 14px
+                  display: inline
+                  margin: 0 5px 0 10px
+            
+            &-last 
+                  color: #000000
+                  &::after
+                        content: ""
+
+.service-text-block
+      overflow: hidden
+
+.service-text
+      display: flex
+      position: relative
+
+      &--bg
+            position: absolute
+            width: 100%
+            height: 100%
+            background-position: center
+            background-repeat: no-repeat
+
+      &--left
+            max-width: 975px
+
+      &--name
+            font-style: normal
+            font-weight: bold
+            font-size: 80px
+            line-height: 73px
+            margin-bottom: 65px
+            color: #2255CE
+
+      &--text
+            font-style: normal
+            font-weight: 300
+            font-size: 20px
+            line-height: 30px
+            color: #3F3F3F
+            max-width: 785px
+            margin-bottom: 30px
+
+      &--btn-more
+            font-style: normal
+            font-weight: normal
+            font-size: 20px
+            line-height: 24px
+            letter-spacing: 0.02em
+            text-decoration-line: underline
+            color: #117CFB
+
+      &--right
+            width: 50%
+      &--banner
+            margin-top: 90px
+            margin-left: auto
+
+.blue-banner
+      position: relative
+      width: 100%
+      max-width: 422px
+      min-height: 378px
+      padding: 85px 36px 70px 67px
+      background: #117CFB
+      border-radius: 100px 0px 50px
+
+      &--price
+            position: absolute
+            top: -80px
+            right: 30px
+            width: 126px
+            height: 126px
+            background: linear-gradient(180deg, #1FBCFF 0%, #008BFF 100%, #2255CE 100%)
+            border-radius: 50%
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            padding-top: 30px
+            padding-left: 22px
+            font-style: normal
+            font-weight: 700
+            font-size: 30px
+            line-height: 26px
+            color: #FFFFFF
+            &-from
+
+                  font-weight: 300
+                  font-size: 20px
+
+      &--name
+            font-style: normal
+            font-weight: bold
+            font-size: 45px
+            line-height: 42px
+            margin-bottom: 22px
+            color: #FFFFFF
+      &--desc
+            font-style: normal
+            font-weight: 300
+            font-size: 20px
+            line-height: 24px
+            color: #FFFFFF
+            margin-bottom: 14px
+            max-width: 310px
+
+      &--share
+            display: flex
+            &-link 
+                  margin-right: 20px
+                  transition: all 0.3s ease
+                  &:hover
+                        transform: scale(1.1)
+
+      &--btn
+            max-width: 211px
+            width: 100%
+            height: 55px
+            display: flex
+            align-items: center
+            justify-content: center
+            background: #FFFFFF
+            border: 1.5px solid #117CFB
+            border-radius: 4px
+            font-style: normal
+            font-weight: bold
+            font-size: 18px
+            line-height: 22px
+            color: #117CFB
+
+.services-category
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+      &--btn
+            width: 205px
+            height: 54px
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 1.5px solid #117CFB
+            border-radius: 4px
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            line-height: 22px
+            margin: auto
+            color: #117CFB
+            transition: all 0.3s ease-in-out
+            &:hover
+                  color: #fff
+                  background: #117CFB
+
+.service-category
+      display: flex
+      flex-direction: column
+      max-width: 340px
+      width: 100%
+      position: relative
+      margin-bottom: 70px
+      &--count
+            font-style: normal
+            font-weight: 300
+            font-size: 16px
+            line-height: 19px
+            color: #000000
+            text-align: center
+            transform: rotate(270deg)
+            width: 20px
+            position: absolute
+            top: -25px
+            right: 0px
+
+      &--img
+            width: 100%
+            height: 218px
+            overflow: hidden
+            margin-bottom: 17px
+            img
+                  width: 100%
+
+
+
+      &--name
+            display: flex
+            font-style: normal
+            font-weight: 300
+            font-size: 30px
+            line-height: 30px
+            color: #000000
+            margin-bottom: 10px
+            min-height: 60px
+
+            &-service
+                  width: 100%
+
+            &-wrap
+                  width: 100%
+
+                  .service-category--name-service
+                        margin-bottom: 10px
+
+      &--price
+            font-style: normal
+            font-weight: 300
+            font-size: 16px
+            line-height: 15px
+            color: #000000
+
+.advantages-block
+      position: relative
+      padding-bottom: 185px
+
+      &--bg
+            width: 100%
+            height: 100%
+            position: absolute
+            background-size: cover
+            background-position: bottom
+            background-repeat: no-repeat
+
+.advantages
+      display: flex
+
+      &--left
+            width: calc( 50% + 40px ) 
+      &--name
+            font-style: normal
+            font-weight: bold
+            font-size: 80px
+            line-height: 73px
+            margin-bottom: 28px
+            color: #2255CE
+
+      &--desc
+            font-style: normal
+            font-weight: normal
+            font-size: 21px
+            line-height: 32px
+            margin-bottom: 27px
+            max-width: 555px
+            color: #333333
+
+      &--btn
+            width: 100%
+            max-width: 205px
+            height: 54px
+            font-style: normal
+            font-weight: bold
+            font-size: 18px
+            line-height: 22px
+            color: #FFFFFF
+      &--right
+            max-width: 694px
+.advantages--items
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      column-gap: 94px
+      margin-top: 30px
+.advantages--item
+      display: flex
+      flex-direction: column
+
+      max-width: 300px
+      margin-bottom: 60px
+
+      &--icon
+            margin-bottom: 21px
+
+      &-name
+            font-style: normal
+            font-weight: bold
+            font-size: 26px
+            line-height: 42px
+            margin-bottom: 12px
+            color: #1C1C1C
+      &-desc
+            font-style: normal
+            font-weight: normal
+            font-size: 20px
+            line-height: 28px
+
+            color: #1C1C1C
+
+.step-job-section
+      overflow: hidden
+      margin-top: 100px
+      margin-bottom: 180px
+
+.step-job
+      display: flex
+      &--left
+            width: calc( 50% + 40px )
+            position: relative
+            .abs-billet
+                  position: absolute
+                  left: 170px
+                  bottom: 45px
+
+      &--img
+            max-width: 640px
+            border-radius: 0px 100px 0px 0px
+            overflow: hidden
+            img
+                  width: 100%
+
+      &--right
+            display: flex
+            flex-direction: column
+            justify-content: center
+            width: 50%
+
+      &--name
+            font-style: normal
+            font-weight: bold
+            font-size: 80px
+            line-height: 65px
+            margin-bottom: 70px
+            color: #2255CE
+
+
+      &--item
+            display: flex
+            align-items: center
+            width: 100%
+            border-bottom: 1px solid #E0E0E0
+            padding: 35px 0
+            &-number, &-value
+                  width: 100%
+                  display: block
+
+            &-number
+                  font-style: normal
+                  font-weight: 300
+                  font-size: 13px
+                  line-height: 21px
+                  letter-spacing: 0.03em
+                  text-transform: uppercase
+                  max-width: 118px
+                  color: #2255CE
+            &-value   
+                  font-style: normal
+                  font-weight: normal
+                  font-size: 40px
+                  line-height: 49px
+                  color: #1C1C1C
+
+.abs-billet
+      max-width: 437px
+      height: 182px
+      background: #FFFFFF
+      border-radius: 0px 0px 80px 0px      
+      padding: 40px 49px 31px 36px
+
+      &--name
+            font-style: normal
+            font-weight: bold
+            font-size: 40px
+            line-height: 34px
+            margin-bottom: 18px
+            color: #117CFB
+
+      &--desc
+            font-style: normal
+            font-weight: 300
+            font-size: 20px
+            line-height: 24px
+            color: #117CFB
+
+.region-block
+      margin: 170px 0
+
+.region
+      display: flex
+      &--map
+            width: calc( 50% + 40px )
+            img
+                  max-width: 713px  
+                  width: 100%
+
+      &--left
+            display: flex
+            flex-direction: column
+            
+
+      &--title
+            font-style: normal
+            font-weight: normal
+            font-size: 60px
+            line-height: 59px
+            color: #2255CE
+            margin-bottom: 21px
+            max-width: 677px
+
+      &--desc
+            font-style: normal
+            font-weight: 300
+            font-size: 20px
+            line-height: 32px
+            margin-bottom: 32px
+            color: #333333
+
+      &--regiones
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            margin-bottom: 31px
+            &-item
+                  font-style: normal
+                  font-weight: 300
+                  font-size: 20px
+                  line-height: 32px
+                  color: #333333
+
+      &--btn
+            width: 100%
+            max-width: 222px
+            height: 60px
+            font-style: normal
+            font-weight: bold
+            font-size: 18px
+            line-height: 18px
+            letter-spacing: 0.02em
+
+            color: #FFFFFF
+                  
+
+

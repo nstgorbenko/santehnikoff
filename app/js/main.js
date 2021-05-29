@@ -1,11 +1,11 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   new WOW().init();
 });
 
 
 // Pinterest layout for reviews
 (function () {
-  const container = document.getElementById("pinterest");
+  const container = document.getElementById('pinterest');
 
   if (container) {
     const ScreenWidth = {
@@ -44,5 +44,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
     makePinterestLayout();
     window.addEventListener('resize', makePinterestLayout);
+  }
+})();
+
+// Price list container height
+(function () {
+  const priceLists = document.querySelectorAll('.price__list');
+
+  if (priceLists) {
+    const TABLET_WIDTH = 992;
+
+    const setPriceListsHeight = () => {
+      const currentScreenWidth = document.documentElement.clientWidth;
+
+      priceLists.forEach((priceList, i) => {
+        if (currentScreenWidth > TABLET_WIDTH) {
+          const priceListContainer = priceList.closest('.price__tab');
+          const priceItemsCount = priceList.children.length;
+
+          if (priceItemsCount) {
+            priceListContainer.style.display = 'block';
+            priceItemHeight = priceList.firstElementChild.offsetHeight;
+            priceListContainer.style.display = null;
+            priceList.style.height = `${Math.ceil(priceItemsCount / 2) * priceItemHeight}px`;
+          } else {
+            priceList.style.height = 0;
+          }
+
+        } else {
+          priceList.style.height = 'auto';
+        }
+      });
+    }
+
+    setPriceListsHeight();
+    window.addEventListener('resize', setPriceListsHeight);
   }
 })();

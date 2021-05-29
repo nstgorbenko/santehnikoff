@@ -57,14 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const setPriceListsHeight = () => {
       const currentScreenWidth = document.documentElement.clientWidth;
 
-      priceLists.forEach((priceList, i) => {
+      priceLists.forEach((priceList) => {
         if (currentScreenWidth > TABLET_WIDTH) {
           const priceListContainer = priceList.closest('.price__tab');
           const priceItemsCount = priceList.children.length;
 
           if (priceItemsCount) {
             priceListContainer.style.display = 'block';
-            priceItemHeight = priceList.firstElementChild.offsetHeight;
+            const priceItemHeight = priceList.firstElementChild.offsetHeight;
             priceListContainer.style.display = null;
             priceList.style.height = `${Math.ceil(priceItemsCount / 2) * priceItemHeight}px`;
           } else {
@@ -79,5 +79,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setPriceListsHeight();
     window.addEventListener('resize', setPriceListsHeight);
+  }
+})();
+
+// Header catalog height
+(function () {
+  const headerCatalog = document.querySelector('.header-catalog__inner');
+
+  if (headerCatalog) {
+    const ScreenWidth = {
+      DESKTOP: 1400,
+      TABLET: 992,
+    };
+    const ColumnsCount = {
+      DESKTOP: 3,
+      TABLET: 2,
+      MOBILE: 1,
+    }
+
+    const catalogLists = headerCatalog.querySelectorAll('.header-catalog__sublist');
+
+    const setHeaderCatalogHeight = () => {
+      const currentScreenWidth = document.documentElement.clientWidth;
+      let catalogListsHeights = [];
+
+      catalogLists.forEach((catalogList) => {
+        const catalogListContainer = catalogList.closest('.header-catalog__inner-list');
+        const catalogListItemsCount = catalogList.children.length;
+
+        let catalogListHeight;
+        if (catalogListItemsCount) {
+          catalogListContainer.style.display = 'block';
+          catalogListItemHeight = catalogList.firstElementChild.offsetHeight;
+          catalogListContainer.style.display = null;
+
+          let columnsCount;
+          if (currentScreenWidth > ScreenWidth.DESKTOP) {
+            columnsCount = ColumnsCount.DESKTOP;
+          } else if (currentScreenWidth > ScreenWidth.TABLET) {
+            columnsCount = ColumnsCount.TABLET;
+          } else {
+            columnsCount = ColumnsCount.MOBILE;
+          }
+
+          catalogListHeight = Math.ceil(catalogListItemsCount / columnsCount) * catalogListItemHeight;
+        } else {
+          catalogListHeight = 0;
+        }
+        catalogListsHeights.push(catalogListHeight);
+      });
+
+      headerCatalog.style.height = `${Math.max(...catalogListsHeights)}px`
+    }
+
+    setHeaderCatalogHeight();
+    window.addEventListener('resize', setHeaderCatalogHeight);
   }
 })();

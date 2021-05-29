@@ -3835,6 +3835,14 @@ select {
   background-color: #f8f8f8;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.13);
 
+  @media (max-width: $small) {
+    width: 100%;
+    max-width: 400px;
+    height: calc(100vh - 58px);
+    max-height: calc(100vh - 58px);
+    background-color: #ffffff;
+  }
+
   &::-webkit-scrollbar-track {
     background-color: #f8f8f8;
   }
@@ -3847,6 +3855,10 @@ select {
   &::-webkit-scrollbar-thumb {
     background-color: #828282;
   }
+
+  .container {
+    height: 100%;
+  }
 }
 
 .header-catalog__button-close {
@@ -3855,7 +3867,7 @@ select {
   align-items: center;
   position: absolute;
   top: 19px;
-  right: 15px;
+  right: -25px;
   width: 25px;
   height: 25px;
   cursor: pointer;
@@ -3876,15 +3888,33 @@ select {
 }
 
 .header-catalog__content {
+  position: relative;
   display: flex;
+  height: 100%;
 }
 
 .header-catalog .header-catalog__list {
   width: 21.5%;
   padding-top: 28px;
+
+  @media (max-width: $extra-large) {
+    width: 280px;
+  }
+
+  @media (max-width: $large) {
+    width: 240px;
+  }
+
+  @media (max-width: $small) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    // height: 100%;
+    padding-top: 26px;
+  }
 }
 
-.header-catalog__link {
+.header-catalog__name {
   @include main-font(24px, 20px, 1.22, 400);
   display: flex;
   justify-content: space-between;
@@ -3892,15 +3922,39 @@ select {
   padding: 18px 24px 23px 40px;
   color: #333333;
   cursor: pointer;
+  transition: all 0.3s ease;
 
-  &--active {
-    color: #117cfb;
-    background-color: white;
+  @media (max-width: $extra-large) {
+    padding: 18px 15px 23px 10px;
   }
 
-  &:hover,
-  &:focus {
+  @media (max-width: $large) {
+    padding: 14px 15px 19px 10px;
+  }
+
+  @media (max-width: $small) {
+    padding: 16px 15px 21px 13px;
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  &:hover {
     color: #117cfb;
+  }
+
+  .header-catalog__checkbox:nth-of-type(1):checked ~ .header-catalog__list &:nth-of-type(1),
+  .header-catalog__checkbox:nth-of-type(2):checked ~ .header-catalog__list &:nth-of-type(2),
+  .header-catalog__checkbox:nth-of-type(3):checked ~ .header-catalog__list &:nth-of-type(3),
+  .header-catalog__checkbox:nth-of-type(4):checked ~ .header-catalog__list &:nth-of-type(4) {
+    @media (min-width: $small+1) {
+      color: #117cfb;
+      background-color: white;
+    }
+  }
+
+  &:last-of-type {
+    @media (max-width: $small) {
+      margin-bottom: 8px;
+    }
   }
 }
 
@@ -3908,33 +3962,117 @@ select {
   transition: all 0.3s ease;
   stroke: #333333;
 
-  .header-catalog__link--active & {
+  @media (max-width: $small) {
+    margin-right: 10px;
+  }
+
+  .header-catalog__name:hover &,
+  .header-catalog__name:focus & {
     stroke: #117cfb;
   }
 
-  .header-catalog__link:hover &,
-  .header-catalog__link:focus & {
-    stroke: #117cfb;
+  .header-catalog__checkbox:nth-of-type(1):checked ~ .header-catalog__list .header-catalog__name:nth-of-type(1) &,
+  .header-catalog__checkbox:nth-of-type(2):checked ~ .header-catalog__list .header-catalog__name:nth-of-type(2) &,
+  .header-catalog__checkbox:nth-of-type(3):checked ~ .header-catalog__list .header-catalog__name:nth-of-type(3) &,
+  .header-catalog__checkbox:nth-of-type(4):checked ~ .header-catalog__list .header-catalog__name:nth-of-type(4) & {
+    @media (min-width: $small+1) {
+      stroke: #117cfb;
+    }
+  }
+}
+
+.header-catalog__inner-wrap {
+  flex-grow: 1;
+  margin-right: -40px;
+  padding: 60px 0 60px 67px;
+  background-color: #ffffff;
+
+  @media (max-width: $large) {
+    padding: 40px 0 40px 40px;
+  }
+
+  @media (max-width: $small) {
+    display: none;
   }
 }
 
 .header-catalog__inner {
-  flex-grow: 1;
-  margin-right: -40px;
-  padding-top: 60px;
-  padding-left: 67px;
-  background-color: #ffffff;
+  position: relative;
 
-  @media (max-width: $x-small) {
-    margin-right: -10x;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 29.4%;
+    width: 1px;
+    height: calc(100% + 40px);
+    background-color: #f2f2f2;
+
+    @media (max-width: $extra-large) {
+      top: 0;
+      left: 45.5%;
+      height: 100%;
+    }
+
+    @media (max-width: $medium) {
+      display: none;
+    }
+  }
+
+  &:after {
+    left: 63.2%;
+
+    @media (max-width: $extra-large) {
+      display: none;
+    }
+  }
+}
+
+.header-catalog__inner-list {
+  display: none;
+
+  .header-catalog__checkbox:nth-of-type(1):checked ~ .header-catalog__inner-wrap &:nth-of-type(1),
+  .header-catalog__checkbox:nth-of-type(2):checked ~ .header-catalog__inner-wrap &:nth-of-type(2),
+  .header-catalog__checkbox:nth-of-type(3):checked ~ .header-catalog__inner-wrap &:nth-of-type(3),
+  .header-catalog__checkbox:nth-of-type(4):checked ~ .header-catalog__inner-wrap &:nth-of-type(4) {
+    display: block;
+    height: 100%;
+  }
+}
+
+.header-catalog__sublist {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header-catalog__subitem {
+  width: 33%;
+
+  @media (max-width: $extra-large) {
+    width: 50%;
+  }
+
+  @media (max-width: $medium) {
+    width: 100%;
   }
 }
 
 .header-catalog__sublink {
-  @include main-font(18px, 18px, 1, 300);
+  @include main-font(18px, 14px, 1, 300);
   display: block;
   padding-bottom: 20px;
   color: #333333;
+
+  @media (max-width: $large) {
+    padding-bottom: 15px;
+  }
+
+  @media (max-width: $medium) {
+    padding-bottom: 12px;
+  }
 
   &:hover,
   &:focus {
@@ -3942,6 +4080,52 @@ select {
   }
 }
 
+.header-catalog__nav-list {
+  display: none;
+
+  @media (max-width: $small) {
+    display: block;
+  }
+}
+
+.header-catalog__nav-link {
+  @include main-font(16px, 16px, 1.2, 400);
+  display: block;
+  padding: 16px 15px 21px 13px;
+  border-bottom: 1px solid #e7e7e7;
+  color: #3e3e3e;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #117cfb;
+  }
+}
+
+.header-catalog__phone {
+  display: none;
+
+  @media (max-width: $small) {
+    display: block;
+    margin: auto 0 47px 13px;
+  }
+}
+
+.header-catalog__phone-number {
+  @include main-font(18px, 18px, 1.2, 400);
+  display: inline-block;
+  margin-bottom: 13px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #117cfb;
+
+  &:hover,
+  &:focus {
+    text-shadow: 0 0 0.5px #117cfb, 0 0 0.5px #117cfb;
+  }
+}
 // Section Article
 
 .author {

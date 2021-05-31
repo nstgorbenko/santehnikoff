@@ -253,6 +253,20 @@ select {
   justify-content: center;
 }
 
+.header__menu-link-icon {
+  .header__menu-link.open & {
+    display: none;
+  }
+
+  &--open {
+    display: none;
+
+    .header__menu-link.open & {
+      display: block;
+    }
+  }
+}
+
 .header__logo {
   display: flex;
   justify-content: center;
@@ -3909,7 +3923,7 @@ select {
     display: flex;
     flex-direction: column;
     width: 100%;
-    // height: 100%;
+    height: 100%;
     padding-top: 26px;
   }
 }
@@ -4088,6 +4102,14 @@ select {
   }
 }
 
+.header-catalog__nav-item {
+  &:last-child {
+    @media (max-width: $small) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
 .header-catalog__nav-link {
   @include main-font(16px, 16px, 1.2, 400);
   display: block;
@@ -4109,7 +4131,8 @@ select {
 
   @media (max-width: $small) {
     display: block;
-    margin: auto 0 47px 13px;
+    margin: auto 0 0 13px;
+    padding-bottom: 47px;
   }
 }
 
@@ -4416,7 +4439,6 @@ select {
   display: block;
   width: 24px;
   height: 24px;
-  outline: 1px solid red;
 }
 
 // Section Works
@@ -4853,4 +4875,92 @@ a.contacts__data:focus {
   left: 0px;
   width: 100%;
   height: 100%;
+}
+
+.header-catalog-list {
+  position: relative;
+}
+
+.header-catalog-list__wrapper {
+  @media (max-width: $small) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    overflow-y: auto;
+    width: 100%;
+    max-width: 400px;
+    height: calc(100vh - 58px);
+    max-height: calc(100vh - 58px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.13);
+    background-color: #ffffff;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f8f8f8;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: #f8f8f8;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #828282;
+  }
+
+  .container {
+    height: 100%;
+  }
+}
+
+.header-catalog-list__content {
+  height: 100%;
+  padding-top: 21px;
+}
+
+.header-catalog-list__nav-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header-catalog-list__nav-link {
+  @include main-font(18px, 18px, 1, 300);
+  display: block;
+  padding: 14px 0 17px 13px;
+  border-top: 1px solid #e7e7e7;
+  color: #333333;
+
+  &:hover,
+  &:focus {
+    color: #117cfb;
+  }
+}
+
+.header-catalog-list__button-back {
+  @include main-font(18px, 18px, 1.22, 400);
+  display: flex;
+  margin-bottom: 19px;
+  padding-left: 6px;
+  align-items: center;
+  color: #a4a4a4;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: #333333;
+  }
+}
+
+.header-catalog-list__button-back-icon {
+  margin-right: 4px;
+  stroke: #a4a4aa;
+  transition: all 0.3s ease;
+
+  .header-catalog-list__button-back:hover &,
+  .header-catalog-list__button-back:focus & {
+    stroke: #333333;
+  }
 }

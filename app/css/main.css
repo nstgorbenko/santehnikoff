@@ -192,7 +192,10 @@ select {
   margin-right: 16px; }
 
 .social-links__icon {
-  fill: none; }
+  fill: transparent;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
   .social-links__link:hover .social-links__icon,
   .social-links__link:focus .social-links__icon {
     fill: rgba(34, 85, 206, 0.5); }
@@ -949,8 +952,8 @@ select {
   @media (max-width: 768px) {
     .footer-bottom__develop-icon {
       margin-left: 10px; } }
-  .footer-bottom--develop:hover .footer-bottom__develop-icon,
-  .footer-bottom--develop:focus .footer-bottom__develop-icon {
+  .footer-bottom__develop:hover .footer-bottom__develop-icon,
+  .footer-bottom__develop:focus .footer-bottom__develop-icon {
     fill: #2255ce; }
 
 .footer-bottom__develop-text {

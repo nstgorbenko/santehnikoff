@@ -208,7 +208,8 @@ select {
 }
 
 .social-links__icon {
-  fill: none;
+  fill: transparent;
+  transition: all 0.3s ease;
 
   .social-links__link:hover &,
   .social-links__link:focus & {
@@ -859,8 +860,8 @@ select {
     margin-left: 10px;
   }
 
-  .footer-bottom--develop:hover &,
-  .footer-bottom--develop:focus & {
+  .footer-bottom__develop:hover &,
+  .footer-bottom__develop:focus & {
     fill: #2255ce;
   }
 }

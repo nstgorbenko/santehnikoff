@@ -158,6 +158,29 @@
             <li class="header__nav-item">
               <a class="header__nav-link" href="#">Контакты</a>
             </li>
+            <li class="header__nav-item header__nav-item--more">
+              <div class="header__more-button"></div>
+              <ul class="header__more-list">
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">О компании</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Наши работы</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Прайс</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Oтзывы</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Блог</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
 
@@ -178,7 +201,7 @@
   </header>
 
   <main class="main">
-    <section class="breadcrumbs">
+    <section class="breadcrumbs wow animate__animated animate__fadeInUp" data-wow-duration="1.5s">
       <div class="container">
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item">
@@ -191,10 +214,13 @@
       </div>
     </section>
 
-    <section class="price">
+    <section class="price wow animate__animated animate__fadeInUp" data-wow-duration="1.5s">
       <div class="container">
         <div class="title">
-          <p class="title__name wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s">Прайс</p>
+          <p class="title__name">Прайс</p>
+          <div class="title__drag">
+            <img class="title__drag-image" src="./img/drag.gif" alt="">
+          </div>
         </div>
 
         <input class="price__checkbox visually-hidden" type="radio" name="price" value="toggle-1" id="toggle-1" checked>
@@ -404,13 +430,12 @@
       </div>
     </section>
 
-    <section class="service-text">
+    <section class="service-text wow animate__animated animate__fadeInUp" data-wow-duration="1.5s">
       <div class="container">
         <div class="service-text__content">
-          <div class="service-text__bg wow animate__animated animate__fadeInRight" data-wow-duration="4s"
-            data-wow-offset="200" style="background-image: url(/img/service-text-bg.png);"></div>
+          <div class="service-text__bg" style="background-image: url(/img/service-text-bg.png);"></div>
           <div class="service-text__left">
-            <p class="service-text__title wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s">Монтаж
+            <p class="service-text__title">Монтаж
               систем отопления в Санкт-Петербурге</p>
             <p class="service-text__text">
               <span>Мы работаем в сфере водоснабжения, канализации, отопления более 3-ех лет. Сотни объектов, начиная
@@ -423,12 +448,12 @@
                 домами, и заканчивая гостиницами, торговыми комплексами уже смонтированы и работают, для комфорта
                 людей.Сотни объектов, начиная частными домами, и заканчивая гостиницами, торговыми комплексами уже
                 смонтированы и работают, для комфорта людей.</span>
+              <a class="service-text__button" href="#">О компании</a>
             </p>
-            <a class="service-text__button-more" href="#">О компании</a>
+            <a class="service-text__button service-text__button--more" href="#">Показать все</a>
           </div>
           <div class="service-text__right">
-            <div class="blue-banner service-text__banner wow animate__animated animate__fadeInRight"
-              data-wow-duration="1.5s">
+            <div class="blue-banner service-text__banner">
               <p class="blue-banner__title">Пенсионерам скидка 15%</p>
               <p class="blue-banner__text">Просто позвоните по номеру на сайте или закажите звонок мастера!</p>
               <a class="blue-banner__button" href="#">Заказать звонок</a>

@@ -158,6 +158,29 @@
             <li class="header__nav-item">
               <a class="header__nav-link" href="#">Контакты</a>
             </li>
+            <li class="header__nav-item header__nav-item--more">
+              <div class="header__more-button"></div>
+              <ul class="header__more-list">
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">О компании</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Наши работы</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Прайс</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Oтзывы</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Блог</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
 
@@ -189,9 +212,10 @@
           <a class="main-screen__button blue-btn" href="#">Получить консультацию</a>
         </div>
       </div>
-      <div class="main-screen__img main-screen__img--right wow animate__animated animate__fadeInRight"></div>
-      <div class="main-screen__img main-screen__img--bottom wow animate__animated animate__fadeInUp"
-        data-wow-duration="2s"></div>
+      <div class="main-screen__img main-screen__img--right" style="background-image: url(/img/main-screen-right.png);">
+      </div>
+      <div class="main-screen__img main-screen__img--bottom"
+        style="background-image: url(/img/main-screen-bottom.png);"></div>
     </section>
 
     <section class="service">
@@ -308,8 +332,6 @@
             <p class="about__face-name">Сергей Цветков</p>
             <p class="about__face-post">директор Сервис Сантехникофф</p>
           </div>
-          <div class="about__bg wow animate__animated animate__fadeInLeft" data-wow-duration="3s"
-            style="background-image: url(/img/about-bg.png);"></div>
           <div class="about__content wow animate__animated animate__fadeInRight">
             <p class="about__text">Мы работаем в сфере водоснабжения, канализации, отопления более 3-ех лет. Сотни
               объектов, начиная частными домами, и заканчивая гостиницами, торговыми комплексами уже смонтированы и
@@ -320,6 +342,7 @@
           </div>
         </div>
       </div>
+      <div class="about__bg" style="background-image: url(/img/about-bg.png);"></div>
     </section>
 
     <section class="advantages">
@@ -685,8 +708,9 @@
                 домами, и заканчивая гостиницами, торговыми комплексами уже смонтированы и работают, для комфорта
                 людей.Сотни объектов, начиная частными домами, и заканчивая гостиницами, торговыми комплексами уже
                 смонтированы и работают, для комфорта людей.</span>
+              <a class="service-text__button" href="#">О компании</a>
             </p>
-            <a class="service-text__button-more" href="#">О компании</a>
+            <a class="service-text__button service-text__button--more" href="#">Показать все</a>
           </div>
           <div class="service-text__right">
             <div class="blue-banner service-text__banner wow animate__animated animate__fadeInRight"
@@ -1043,7 +1067,7 @@
     </form>
   </section>
 
-  <script src="./js/wow.min.js"></script>
+  <!-- <script src="./js/wow.min.js"></script> -->
   <script src="./js/main.js"></script>
 </body>
 

@@ -106,11 +106,13 @@ document.addEventListener('DOMContentLoaded', () => {
       catalogLists.forEach((catalogList) => {
         const catalogListContainer = catalogList.closest('.header-catalog__inner-list');
         const catalogListItemsCount = catalogList.children.length;
+        console.log(catalogListItemsCount);
 
         let catalogListHeight;
         if (catalogListItemsCount) {
           catalogListContainer.style.display = 'block';
-          catalogListItemHeight = catalogList.firstElementChild.offsetHeight;
+          catalogListItemHeight = catalogList.firstElementChild.offsetHeight + 1;
+          console.log(catalogListItemHeight);
           catalogListContainer.style.display = null;
 
           let columnsCount;
@@ -134,5 +136,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setHeaderCatalogHeight();
     window.addEventListener('resize', setHeaderCatalogHeight);
+  }
+})();
+
+// Show more About section
+(function () {
+  const aboutSection = document.querySelector('.about');
+
+  if (aboutSection) {
+    const showMoreButton = document.querySelector('.about__link--more');
+    if (showMoreButton) {
+      const textContainer = document.querySelector('.about__content');
+
+      showMoreButton.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        textContainer.style.height = `${textContainer.scrollHeight}px`;
+        textContainer.classList.add('show');
+        showMoreButton.remove();
+      })
+    }
+  }
+})();
+
+// Show more Service-text section
+(function () {
+  const aboutSection = document.querySelector('.service-text');
+
+  if (aboutSection) {
+    const showMoreButton = document.querySelector('.service-text__button--more');
+    if (showMoreButton) {
+      const textContainer = document.querySelector('.service-text__text');
+
+      showMoreButton.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        textContainer.style.height = `${textContainer.scrollHeight}px`;
+        textContainer.classList.add('show');
+        showMoreButton.remove();
+      })
+    }
   }
 })();

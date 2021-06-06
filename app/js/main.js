@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
-  new WOW().init();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//   new WOW().init();
+// });
 
 
 // Pinterest layout for reviews
@@ -134,5 +134,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setHeaderCatalogHeight();
     window.addEventListener('resize', setHeaderCatalogHeight);
+  }
+})();
+
+(function () {
+  // Show more About section
+  const aboutSection = document.querySelector('.about');
+
+  if (aboutSection) {
+    const showMoreButton = document.querySelector('.about__link--more');
+    const textContainer = document.querySelector('.about__content');
+
+    showMoreButton.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      textContainer.style.height = `${textContainer.scrollHeight}px`;
+      textContainer.classList.add('show');
+      showMoreButton.remove();
+    })
   }
 })();

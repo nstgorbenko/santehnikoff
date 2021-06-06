@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Сервис Sантехникоff. Контакты</title>
+  <title>Сервис Sантехникоff. Ошибка 404</title>
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/animate.min.css">
 </head>
@@ -178,86 +178,14 @@
   </header>
 
   <main class="main">
-    <section class="breadcrumbs">
-      <div class="container">
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="#">Главная</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link  breadcrumbs__link--active" href="#">Контакты</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="contacts-block">
-      <div class="container">
-        <div class="title contacts-block__title">
-          <p class="title__name wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s">Контакты</p>
+    <section class="not-found">
+      <div class="not-found__wrapper">
+        <div class="not-found__image-wrap">
+          <img class="not-found__image" src="img/404.png" alt="Ошибка 404">
         </div>
-        <p class="contacts-block__text wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s">Вы можете
-          связаться с нами и получить консультацию или заказать необходимую
-          услугу</p>
-        <div class="contacts-block__content">
-          <div class="contacts-block__part wow animate__animated animate__fadeInLeft">
-            <div class="contacts-block__form">
-              <div class="input">
-                <input class="input__field" type="text" name="name" id="name" placeholder="Введите ваше имя">
-                <label class="input__label" for="name">Ваше имя</label>
-              </div>
-              <div class="input">
-                <!-- Если в поле введены неверные данные, input добавляется класс .input__field--invalid -->
-                <input class="input__field" type="text" name="tel" id="tel" placeholder="Введите номер телефона"
-                  required>
-                <label class="input__label" for="tel">
-                  Ваш телефон
-                </label>
-                <!-- Текст ошибки указывается в span с классами .input__note .input__note--invalid -->
-                <span class="input__note input__note--invalid">Телефон указан неверно, пример: +7 111 222-33-44</span>
-              </div>
-              <button class="blue-btn contacts-block__button" type="submit">Отправить</button>
-              <p class="contacts-block__caption">Нажимая на кнопку «Отправить» я даю согласие на обработку
-                <a class="contacts-block__caption-link" href="#"> персональных данных</a>
-              </p>
-            </div>
-          </div>
-          <div class="contacts-block__part">
-            <address class="contacts">
-              <ul class="contacts__list">
-                <li class="contacts__item wow animate__animated animate__fadeInUp" data-wow-duration="1s">
-                  <p class="contacts__title">Телефон</p>
-                  <div class="contacts__content">
-                    <a class="contacts__data" href="tel:+79002366626">+7 900 236 66 26</a>
-                    <a class="contacts__data" href="tel:+79034541236">+7 903 454 12 36</a>
-                  </div>
-                </li>
-                <li class="contacts__item wow animate__animated animate__fadeInUp" data-wow-duration="2s">
-                  <p class="contacts__title">Почта</p>
-                  <div class="contacts__content">
-                    <a class="contacts__data"
-                      href="mailto:info@service-santehnikoff.com">info@service-santehnikoff.com</a>
-                  </div>
-                </li>
-                <li class="contacts__item wow animate__animated animate__fadeInUp" data-wow-duration="3s">
-                  <p class="contacts__title">Адрес</p>
-                  <div class="contacts__content">
-                    <p class="contacts__data">Санкт-Петербург,<br>ул. Декабристов, 5</p>
-                  </div>
-                </li>
-                <li class="contacts__item wow animate__animated animate__fadeInUp" data-wow-duration="4s">
-                  <p class="contacts__title">Режим работы</p>
-                  <div class="contacts__content">
-                    <p class="contacts__data">Пн-Пт: 9.00 - 18.00<br>Сб: 9.00 - 16.00, Вс: Выходной</p>
-                  </div>
-                </li>
-              </ul>
-            </address>
-          </div>
-        </div>
-        <div class="contacts-block__map wow animate__animated animate__fadeInUp" data-wow-duration="2s">
-          <iframe src=" https://yandex.ru/map-widget/v1/-/CCUaaRWR2B" frameborder="0" allowfullscreen="true"></iframe>
-        </div>
+        <p class="not-found__title">Cтраница не найдена</p>
+        <p class="not-found__text">Страница устарела, удалена или не существовала вовсе</p>
+        <a class="blue-btn not-found__button" href="#">Перейти на главную</a>
       </div>
     </section>
   </main>

@@ -15,7 +15,7 @@
     <div class="container">
       <div class="header__content">
         <div class="header__menu">
-          <a class="header__menu-link open" href="#">
+          <a class="header__menu-link" href="#">
             <svg class="header__menu-link-icon" width="19" height="15" viewBox="0 0 19 15" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M1 13.1744H17.9989" stroke="#117CFB" stroke-width="2" stroke-linecap="round"
@@ -24,11 +24,6 @@
                 stroke-linejoin="round" />
               <path d="M1.00146 1.89879H18.0004" stroke="#117CFB" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round" />
-            </svg>
-            <svg class="header__menu-link-icon header__menu-link-icon--open" width="14" height="14" viewBox="0 0 14 14"
-              fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13 1L1 13" stroke="#117CFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M1 1L13 13" stroke="#117CFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </a>
         </div>
@@ -134,7 +129,7 @@
 
         <div class="header__nav">
           <div class="header__nav-catalog">
-            <a class="header__nav-link header__nav-link--catalog open" href="#">
+            <a class="header__nav-link header__nav-link--catalog" href="#">
               <svg class="header__nav-link-icon" xmlns="http://www.w3.org/2000/svg" width="23" height="18"
                 viewBox="0 0 23 18" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -162,6 +157,29 @@
             </li>
             <li class="header__nav-item">
               <a class="header__nav-link" href="#">Контакты</a>
+            </li>
+            <li class="header__nav-item header__nav-item--more">
+              <div class="header__more-button"></div>
+              <ul class="header__more-list">
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">О компании</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Наши работы</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Прайс</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Oтзывы</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Блог</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Контакты</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -521,9 +539,10 @@
           <a class="main-screen__button blue-btn" href="#">Получить консультацию</a>
         </div>
       </div>
-      <div class="main-screen__img main-screen__img--right wow animate__animated animate__fadeInRight"></div>
-      <div class="main-screen__img main-screen__img--bottom wow animate__animated animate__fadeInUp"
-        data-wow-duration="2s"></div>
+      <div class="main-screen__img main-screen__img--right" style="background-image: url(/img/main-screen-right.png);">
+      </div>
+      <div class="main-screen__img main-screen__img--bottom"
+        style="background-image: url(/img/main-screen-bottom.png);"></div>
     </section>
 
     <section class="service">
@@ -643,8 +662,6 @@
             <p class="about__face-name">Сергей Цветков</p>
             <p class="about__face-post">директор Сервис Сантехникофф</p>
           </div>
-          <div class="about__bg wow animate__animated animate__fadeInLeft" data-wow-duration="3s"
-            style="background-image: url(/img/about-bg.png);"></div>
           <div class="about__content wow animate__animated animate__fadeInRight">
             <p class="about__text">Мы работаем в сфере водоснабжения, канализации, отопления более 3-ех лет. Сотни
               объектов, начиная частными домами, и заканчивая гостиницами, торговыми комплексами уже смонтированы и
@@ -655,6 +672,7 @@
           </div>
         </div>
       </div>
+      <div class="about__bg" style="background-image: url(/img/about-bg.png);"></div>
     </section>
 
     <section class="advantages">
@@ -1020,8 +1038,9 @@
                 домами, и заканчивая гостиницами, торговыми комплексами уже смонтированы и работают, для комфорта
                 людей.Сотни объектов, начиная частными домами, и заканчивая гостиницами, торговыми комплексами уже
                 смонтированы и работают, для комфорта людей.</span>
+              <a class="service-text__button" href="#">О компании</a>
             </p>
-            <a class="service-text__button-more" href="#">О компании</a>
+            <a class="service-text__button service-text__button--more" href="#">Показать все</a>
           </div>
           <div class="service-text__right">
             <div class="blue-banner wow animate__animated animate__fadeInRight" data-wow-duration="1.5s">

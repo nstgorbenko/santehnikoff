@@ -1,6 +1,6 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//   new WOW().init();
-// });
+document.addEventListener('DOMContentLoaded', () => {
+  new WOW().init();
+});
 
 
 // Pinterest layout for reviews
@@ -106,11 +106,13 @@
       catalogLists.forEach((catalogList) => {
         const catalogListContainer = catalogList.closest('.header-catalog__inner-list');
         const catalogListItemsCount = catalogList.children.length;
+        console.log(catalogListItemsCount);
 
         let catalogListHeight;
         if (catalogListItemsCount) {
           catalogListContainer.style.display = 'block';
-          catalogListItemHeight = catalogList.firstElementChild.offsetHeight;
+          catalogListItemHeight = catalogList.firstElementChild.offsetHeight + 1;
+          console.log(catalogListItemHeight);
           catalogListContainer.style.display = null;
 
           let columnsCount;
@@ -137,19 +139,40 @@
   }
 })();
 
+// Show more About section
 (function () {
-  // Show more About section
   const aboutSection = document.querySelector('.about');
 
   if (aboutSection) {
     const showMoreButton = document.querySelector('.about__link--more');
-    const textContainer = document.querySelector('.about__content');
+    if (showMoreButton) {
+      const textContainer = document.querySelector('.about__content');
 
-    showMoreButton.addEventListener('click', (evt) => {
-      evt.preventDefault();
-      textContainer.style.height = `${textContainer.scrollHeight}px`;
-      textContainer.classList.add('show');
-      showMoreButton.remove();
-    })
+      showMoreButton.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        textContainer.style.height = `${textContainer.scrollHeight}px`;
+        textContainer.classList.add('show');
+        showMoreButton.remove();
+      })
+    }
+  }
+})();
+
+// Show more Service-text section
+(function () {
+  const aboutSection = document.querySelector('.service-text');
+
+  if (aboutSection) {
+    const showMoreButton = document.querySelector('.service-text__button--more');
+    if (showMoreButton) {
+      const textContainer = document.querySelector('.service-text__text');
+
+      showMoreButton.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        textContainer.style.height = `${textContainer.scrollHeight}px`;
+        textContainer.classList.add('show');
+        showMoreButton.remove();
+      })
+    }
   }
 })();

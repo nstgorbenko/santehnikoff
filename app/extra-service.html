@@ -158,6 +158,29 @@
             <li class="header__nav-item">
               <a class="header__nav-link" href="#">Контакты</a>
             </li>
+            <li class="header__nav-item header__nav-item--more">
+              <div class="header__more-button"></div>
+              <ul class="header__more-list">
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">О компании</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Наши работы</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Прайс</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Oтзывы</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Блог</a>
+                </li>
+                <li class="header__more-item">
+                  <a class="header__more-link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
 
@@ -178,7 +201,7 @@
   </header>
 
   <main class="main">
-    <section class="top-info">
+    <section class="top-info wow animate__animated animate__fadeInUp" data-wow-duration="1.5s">
       <div class="container">
         <div class="top-info__wrapper">
           <div class="top-info__bg" style="background-image: url(/img/top-service-bg.png);"></div>
@@ -197,7 +220,7 @@
       </div>
     </section>
 
-    <section class="breadcrumbs">
+    <section class="breadcrumbs wow animate__animated animate__fadeInUp" data-wow-duration="1.5s">
       <div class="container">
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item">
@@ -213,13 +236,12 @@
       </div>
     </section>
 
-    <section class="service-text">
+    <section class="service-text wow animate__animated animate__fadeInUp" data-wow-duration="1.5s">
       <div class="container">
         <div class="service-text__content">
-          <div class="service-text__bg wow animate__animated animate__fadeInRight" data-wow-duration="4s"
-            data-wow-offset="200" style="background-image: url(/img/service-text-bg.png);"></div>
+          <div class="service-text__bg" style="background-image: url(/img/service-text-bg.png);"></div>
           <div class="service-text__left">
-            <p class="service-text__title wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s">Замена
+            <p class="service-text__title">Замена
               отопления в Санкт-Петербурге</p>
             <p class="service-text__text">
               <span>Мы работаем в сфере водоснабжения, канализации, отопления более 3-ех лет. Сотни объектов, начиная
@@ -232,12 +254,14 @@
                 комфорта людей. оборудованием, которые готовы оперативно вам помочь. Мы работаем в сфере водоснабжения,
                 канализации, отопления более 3-ех лет. Сотни объектов, начиная частными домами, и заканчивая
                 гостиницами, торговыми комплексами уже смонтированы и работают, для комфорта людей.</span>
+              <a class="service-text__button" href="#">О компании</a>
             </p>
-            <a class="service-text__button-more" href="#">О компании</a>
+            <a class="service-text__button service-text__button--more" href="#">Показать все</a>
           </div>
           <div class="service-text__right">
-            <div class="blue-banner blue-banner--with-price" data-wow-duration="1.5s">
-              <div class="blue-banner__price wow animate__animated  animate__rotateInUpRight">от
+            <div class="blue-banner blue-banner--with-price">
+              <div class="blue-banner__price wow animate__animated  animate__rotateInUpRight" data-wow-duration="2.5s">
+                от
                 <span class="blue-banner__price-value">21 000 ₽</span>
               </div>
               <p class="blue-banner__title">Закажите звонок мастера</p>
@@ -249,10 +273,10 @@
       </div>
     </section>
 
-    <section class="advantages">
+    <section class="advantages wow animate__animated animate__fadeInUp" data-wow-duration="1.5s">
       <div class="container">
         <div class="advantages__content">
-          <div class="advantages__left wow animate__animated animate__fadeInLeft">
+          <div class="advantages__left">
             <p class="advantages__title">Почему стоит выбирать нас?</p>
             <p class="advantages__text">Вы обнаружили, что у вас протекает стояк с холодной или горячей водой?
               Засорилась раковина? Вам привезли
@@ -265,18 +289,18 @@
                 <p class="advantages__item-name">Мы ведем работы в срок</p>
                 <p class="advantages__item-text">Мы проводим все работы в четко определенный период времени</p>
               </li>
-              <li class="advantages__item wow animate__animated animate__fadeInUp" data-wow-duration="2s">
+              <li class="advantages__item wow animate__animated animate__fadeInUp" data-wow-duration="1.5s">
                 <p class="advantages__item-name">Разумные цены</p>
                 <p class="advantages__item-text">У нас фиксированные цены за работы, мы не пытаемся выжать из вас как
                   можно
                   больше денег</p>
               </li>
-              <li class="advantages__item wow animate__animated animate__fadeInUp" data-wow-duration="3s">
+              <li class="advantages__item wow animate__animated animate__fadeInUp" data-wow-duration="2s">
                 <p class="advantages__item-name">Качественная работа</p>
                 <p class="advantages__item-text">Мы проводим работы любой сложности и самое главное – проводим их
                   качественно</p>
               </li>
-              <li class="advantages__item wow animate__animated animate__fadeInUp" data-wow-duration="4s">
+              <li class="advantages__item wow animate__animated animate__fadeInUp" data-wow-duration="2.5s">
                 <p class="advantages__item-name">Договор и гарантия</p>
                 <p class="advantages__item-text">Работаем по Договору и даем гарантию до 5-х лет на все наши работы и
                   комплектующие</p>
@@ -286,11 +310,10 @@
           </div>
         </div>
       </div>
-      <div class="advantages__bg wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-offset="300"
-        style="background-image: url(/img/advantages-bg.png);"></div>
+      <div class="advantages__bg" style="background-image: url(/img/advantages-bg.png);"></div>
     </section>
 
-    <section class="step-job">
+    <section class="step-job wow animate__animated animate__fadeInUp" data-wow-duration="1.5s">
       <div class="container">
         <div class="step-job__content">
           <div class="step-job__left">
@@ -300,13 +323,13 @@
                 <img class="step-job__image" src="img/price-service-mobile-1.jpg" alt="Этапы работ">
               </picture>
             </div>
-            <div class="sticker wow animate__animated animate__fadeInUp">
+            <div class="sticker">
               <p class="sticker__title">Соблюдаем санитарные нормы</p>
               <p class="sticker__text">Мастера будут в масках и перчатках</p>
             </div>
           </div>
           <div class="step-job__right">
-            <div class="step-job__title wow animate__animated animate__fadeInUp">Этапы работ</div>
+            <div class="step-job__title">Этапы работ</div>
             <ul class="step-job__list">
               <li class="step-job__item">
                 <span class="step-job__item-count">Первый</span>
@@ -334,11 +357,11 @@
       </div>
     </section>
 
-    <section class="reviews-block">
+    <section class="reviews-block wow animate__animated animate__fadeInUp" data-wow-duration="1.5s">
       <div class="container">
         <div class="title">
-          <p class="title__name wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s">Отзывы</p>
-          <a class="title__link  wow animate__animated animate__fadeInRight" data-wow-duration="1.5s" href="#">
+          <p class="title__name">Отзывы</p>
+          <a class="title__link" href="#">
             Все отзывы
             <span class="title__link-arrow">
               <svg class="title__link-icon" width="23" height="16" viewBox="0 0 23 16" fill="none"
@@ -375,7 +398,7 @@
               </article>
             </li>
             <li class="reviews-block__item">
-              <article class="review wow animate__animated animate__fadeInUp" data-wow-duration="2s">
+              <article class="review wow animate__animated animate__fadeInUp" data-wow-duration="1.5s">
                 <div class="review__top">
                   <div class="review__info">
                     <time class="review__date" datetime="2020-10-05">05.10.2020г</time>
@@ -398,7 +421,7 @@
               </article>
             </li>
             <li class="reviews-block__item">
-              <article class="review wow animate__animated animate__fadeInUp" data-wow-duration="3s">
+              <article class="review wow animate__animated animate__fadeInUp" data-wow-duration="2s">
                 <div class="review__top">
                   <div class="review__info">
                     <time class="review__date" datetime="2020-10-05">05.10.2020г</time>
@@ -421,7 +444,7 @@
               </article>
             </li>
           </ul>
-          <a class="reviews-block__link" data-wow-duration="1.5s" href="#">
+          <a class="reviews-block__link" href="#">
             Все отзывы
             <span class="reviews-block__arrow">
               <svg class="reviews-block__icon" width="18" height="12" viewBox="0 0 23 16" fill="none"
@@ -435,10 +458,10 @@
       </div>
     </section>
 
-    <section class="feedback" style="background-image: url(/img/bg-feedback.png);">
-      <div class="feedback__bg wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-offset="100"
-        style="background-image: url(/img/bg-feedback-center.png);"></div>
-      <div class="feedback__form-wrap wow animate__animated animate__fadeInUp" data-wow-duration="2s">
+    <section class="feedback wow animate__animated animate__fadeInUp" data-wow-duration="1.5s"
+      style="background-image: url(/img/bg-feedback.png);">
+      <div class="feedback__bg" style="background-image: url(/img/bg-feedback-center.png);"></div>
+      <div class="feedback__form-wrap">
         <p class="feedback__title">Заказать выезд мастера</p>
         <p class="feedback__text">Оставьте свой номер и мы вам перезвоним</p>
         <form class="feedback__form" method="post" action="#">
@@ -454,15 +477,13 @@
       </div>
     </section>
 
-    <section class="staff">
-      <div class="staff__bg wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-offset="100"
-        style="background-image: url(/img/bg-staff-center.png);"></div>
+    <section class="staff wow animate__animated animate__fadeInUp" data-wow-duration="1.5s">
+      <div class="staff__bg" style="background-image: url(/img/bg-staff-center.png);"></div>
       <div class="container">
         <div class="title">
-          <p class="title__name wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s">Наши сотрудники</p>
+          <p class="title__name">Наши сотрудники</p>
           <div class="title__links">
-            <a class="title__link title__link--left wow animate__animated animate__fadeInRight" data-wow-duration="1.5s"
-              href="#">
+            <a class="title__link title__link--left" href="#">
               <span class="title__link-arrow">
                 <svg class="title__link-icon" width="23" height="16" viewBox="0 0 23 16" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -471,7 +492,7 @@
                 </svg>
               </span>
             </a>
-            <a class="title__link wow animate__animated animate__fadeInRight" data-wow-duration="1.5s" href="#">
+            <a class="title__link wow animate__animated animate__fadeInRight" data-wow-duration="1s" href="#">
               <span class="title__link-arrow">
                 <svg class="title__link-icon" width="23" height="16" viewBox="0 0 23 16" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -484,7 +505,7 @@
         </div>
         <div class="staff__content">
           <ul class="staff__list">
-            <li class="staff__item wow animate__animated animate__fadeInUp" data-wow-duration="1s">
+            <li class="staff__item wow animate__animated animate__fadeInUp" data-wow-duration="1.5s">
               <article class="staff-person">
                 <p class="staff-person__experience">Опыт 9 лет</p>
                 <p class="staff-person__name">Иван Иванов</p>
@@ -502,7 +523,7 @@
                 </div>
               </article>
             </li>
-            <li class="staff__item wow animate__animated animate__fadeInUp" data-wow-duration="3s">
+            <li class="staff__item wow animate__animated animate__fadeInUp" data-wow-duration="2.5s">
               <article class="staff-person">
                 <p class="staff-person__experience">Опыт 5 лет</p>
                 <p class="staff-person__name">Виктор Горбунов</p>
@@ -526,13 +547,12 @@
       </div>
     </section>
 
-    <section class="service-text">
+    <section class="service-text wow animate__animated animate__fadeInUp" data-wow-duration="1.5s">
       <div class="container">
         <div class="service-text__content">
-          <div class="service-text__bg wow animate__animated animate__fadeInRight" data-wow-duration="4s"
-            data-wow-offset="200" style="background-image: url(/img/service-text-bg.png);"></div>
+          <div class="service-text__bg" style="background-image: url(/img/service-text-bg.png);"></div>
           <div class="service-text__left">
-            <p class="service-text__title wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s">Монтаж
+            <p class="service-text__title">Монтаж
               систем отопления в Санкт-Петербурге</p>
             <p class="service-text__text">
               <span>Мы работаем в сфере водоснабжения, канализации, отопления более 3-ех лет. Сотни объектов, начиная
@@ -545,12 +565,12 @@
                 домами, и заканчивая гостиницами, торговыми комплексами уже смонтированы и работают, для комфорта
                 людей.Сотни объектов, начиная частными домами, и заканчивая гостиницами, торговыми комплексами уже
                 смонтированы и работают, для комфорта людей.</span>
+              <a class="service-text__button" href="#">О компании</a>
             </p>
-            <a class="service-text__button-more" href="#">О компании</a>
+            <a class="service-text__button service-text__button--more" href="#">Показать все</a>
           </div>
           <div class="service-text__right">
-            <div class="blue-banner service-text__banner wow animate__animated animate__fadeInRight"
-              data-wow-duration="1.5s">
+            <div class="blue-banner service-text__banner">
               <p class="blue-banner__title">Пенсионерам скидка 15%</p>
               <p class="blue-banner__text">Просто позвоните по номеру на сайте или закажите звонок мастера!</p>
               <a class="blue-banner__button" href="#">Заказать звонок</a>
@@ -560,13 +580,12 @@
       </div>
     </section>
 
-    <section class="service service--slider">
+    <section class="service service--slider wow animate__animated animate__fadeInUp" data-wow-duration="1.5s">
       <div class="container">
         <div class="title">
-          <p class="title__name wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s">Другие услуги</p>
+          <p class="title__name">Другие услуги</p>
           <div class="title__links">
-            <a class="title__link title__link--left wow animate__animated animate__fadeInRight" data-wow-duration="1.5s"
-              href="#">
+            <a class="title__link title__link--left" href="#">
               <span class="title__link-arrow">
                 <svg class="title__link-icon" width="23" height="16" viewBox="0 0 23 16" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -575,7 +594,7 @@
                 </svg>
               </span>
             </a>
-            <a class="title__link wow animate__animated animate__fadeInRight" data-wow-duration="1.5s" href="#">
+            <a class="title__link" href="#">
               <span class="title__link-arrow">
                 <svg class="title__link-icon" width="23" height="16" viewBox="0 0 23 16" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -608,7 +627,7 @@
                 </div>
               </a>
             </li>
-            <li class="service__item wow animate__animated animate__fadeInUp" data-wow-duration="2s">
+            <li class="service__item wow animate__animated animate__fadeInUp" data-wow-duration="1.5s">
               <a class="service__link" href="#">
                 <div class="service__image-wrap">
                   <img class="service__image service__image--colored" src="./img/other-service-9.jpg" width="340"
@@ -628,7 +647,7 @@
                 </div>
               </a>
             </li>
-            <li class="service__item wow animate__animated animate__fadeInUp" data-wow-duration="3s">
+            <li class="service__item wow animate__animated animate__fadeInUp" data-wow-duration="2s">
               <a class="service__link" href="#">
                 <div class="service__image-wrap">
                   <img class="service__image service__image--colored" src="./img/other-service-10.jpg" width="340"
@@ -648,7 +667,7 @@
                 </div>
               </a>
             </li>
-            <li class="service__item wow animate__animated animate__fadeInUp" data-wow-duration="4s">
+            <li class="service__item wow animate__animated animate__fadeInUp" data-wow-duration="2.5s">
               <a class="service__link" href="#">
                 <div class="service__image-wrap">
                   <img class="service__image service__image--colored" src="./img/other-service-11.jpg" width="340"
@@ -978,7 +997,7 @@
     </div>
   </footer>
 
-  <!-- <script src="./js/wow.min.js"></script> -->
+  <script src="./js/wow.min.js"></script>
   <script src="./js/main.js"></script>
 </body>
 

@@ -1,8 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-  new WOW().init();
-});
-
-
 // Pinterest layout for reviews
 (function () {
   const container = document.getElementById('pinterest');

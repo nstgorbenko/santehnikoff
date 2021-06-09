@@ -1,4 +1,5 @@
-@import "../font/calibri/calibri.css";
+@import "../fonts/calibri/calibri.css";
+@import "../fonts/opensans/opensans.css";
 
 // Viewport
 
@@ -1376,6 +1377,11 @@ select {
 
 .price-service__item-cost {
   @include main-font(24px, 20px, 1.6, 700);
+
+  span {
+    @include main-font(21px, 17px, 1.6, 700);
+    font-family: "Open Sans", "Arial", sans-serif;
+  }
 }
 
 .price-services__link {
@@ -2223,6 +2229,11 @@ select {
 
 .blue-banner__price-value {
   @include main-font(30px, 20px, 0.89, 700);
+
+  span {
+    @include main-font(27px, 17px, 0.89, 700);
+    font-family: "Open Sans", "Arial", sans-serif;
+  }
 }
 
 .blue-banner__title {
@@ -3190,17 +3201,17 @@ select {
   display: flex;
   flex-direction: column;
   width: 70%;
-  height: 100%;
   color: #000000;
 
   @media (max-width: $small) {
     @include main-font(40px, 18px, 0.935, 300);
-    width: 100%;
+    width: 80%;
   }
 
   .service__name-wrap--price & {
     @include main-font(30px, 18px, 0.935, 300);
     width: 80%;
+    height: 100%;
 
     @media (max-width: $small) {
       @include main-font(40px, 18px, 0.935, 300);
@@ -3230,15 +3241,18 @@ select {
   @media (max-width: $x-small) {
     padding-top: 20px;
   }
+
+  span {
+    @include main-font(13px, 11px, 0.935, 300);
+    font-family: "Open Sans", "Arial", sans-serif;
+  }
 }
 
 .service__name-arrow {
-  position: absolute;
-  top: 0;
-  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   width: 52px;
   height: 52px;
   border-radius: 50%;
@@ -3255,18 +3269,24 @@ select {
     height: 30px;
   }
 
-  @media (max-width: $small) {
-    top: auto;
-    bottom: 10px;
-  }
-
-  @media (max-width: $x-small) {
-    bottom: 0;
-  }
-
   .service__link:hover &,
   .service__link:focus & {
     background-color: #117cfb;
+  }
+
+  .service__name-wrap--price & {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @media (max-width: $small) {
+      top: auto;
+      bottom: 10px;
+    }
+
+    @media (max-width: $x-small) {
+      bottom: 0;
+    }
   }
 }
 
@@ -4208,6 +4228,7 @@ select {
   }
 
   @media (max-width: $small) {
+    min-height: 62px;
     padding: 16px 15px 21px 13px;
     border-bottom: 1px solid #e7e7e7;
   }
@@ -4933,6 +4954,16 @@ select {
 
     @media (max-width: $x-small) {
       padding-left: 7px;
+    }
+  }
+
+  span span {
+    @include main-font(21px, 13px, 1.6, 700);
+    font-family: "Open Sans", "Arial", sans-serif;
+    padding-left: 0;
+
+    @media (max-width: $x-small) {
+      padding-left: 0;
     }
   }
 }

@@ -1,4 +1,5 @@
-@import url(../font/calibri/calibri.css);
+@import url(../fonts/calibri/calibri.css);
+@import url(../fonts/opensans/opensans.css);
 @-webkit-keyframes opencatalog {
   0%,
   100% {
@@ -1544,6 +1545,19 @@ select {
   @media screen and (min-width: 1600px) {
     .price-service__item-cost {
       font-size: 24px; } }
+  .price-service__item-cost span {
+    font-size: -webkit-calc( 17px + 4 * ( (100vw - 320px) / 1280 ));
+    font-size: calc( 17px + 4 * ( (100vw - 320px) / 1280 ));
+    line-height: 1.6;
+    font-weight: 700;
+    font-family: "Calibri", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif; }
+    @media screen and (max-width: 320px) {
+      .price-service__item-cost span {
+        font-size: 17px; } }
+    @media screen and (min-width: 1600px) {
+      .price-service__item-cost span {
+        font-size: 21px; } }
 
 .price-services__link {
   display: none; }
@@ -2604,6 +2618,19 @@ select {
   @media screen and (min-width: 1600px) {
     .blue-banner__price-value {
       font-size: 30px; } }
+  .blue-banner__price-value span {
+    font-size: -webkit-calc( 17px + 10 * ( (100vw - 320px) / 1280 ));
+    font-size: calc( 17px + 10 * ( (100vw - 320px) / 1280 ));
+    line-height: 0.89;
+    font-weight: 700;
+    font-family: "Calibri", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif; }
+    @media screen and (max-width: 320px) {
+      .blue-banner__price-value span {
+        font-size: 17px; } }
+    @media screen and (min-width: 1600px) {
+      .blue-banner__price-value span {
+        font-size: 27px; } }
 
 .blue-banner__title {
   font-size: -webkit-calc( 30px + 15 * ( (100vw - 320px) / 1280 ));
@@ -3785,7 +3812,6 @@ select {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 70%;
-  height: 100%;
   color: #000000; }
   @media screen and (max-width: 320px) {
     .service__name {
@@ -3800,7 +3826,7 @@ select {
       line-height: 0.935;
       font-weight: 300;
       font-family: "Calibri", sans-serif;
-      width: 100%; } }
+      width: 80%; } }
   @media screen and (max-width: 768px) and (max-width: 320px) {
     .service__name {
       font-size: 18px; } }
@@ -3813,7 +3839,8 @@ select {
     line-height: 0.935;
     font-weight: 300;
     font-family: "Calibri", sans-serif;
-    width: 80%; }
+    width: 80%;
+    height: 100%; }
     @media screen and (max-width: 320px) {
       .service__name-wrap--price .service__name {
         font-size: 18px; } }
@@ -3871,11 +3898,21 @@ select {
   @media (max-width: 576px) {
     .service__price {
       padding-top: 20px; } }
+  .service__price span {
+    font-size: -webkit-calc( 11px + 2 * ( (100vw - 320px) / 1280 ));
+    font-size: calc( 11px + 2 * ( (100vw - 320px) / 1280 ));
+    line-height: 0.935;
+    font-weight: 300;
+    font-family: "Calibri", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif; }
+    @media screen and (max-width: 320px) {
+      .service__price span {
+        font-size: 11px; } }
+    @media screen and (min-width: 1600px) {
+      .service__price span {
+        font-size: 13px; } }
 
 .service__name-arrow {
-  position: absolute;
-  top: 0;
-  right: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3888,6 +3925,9 @@ select {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
   width: 52px;
   height: 52px;
   -webkit-border-radius: 50%;
@@ -3904,16 +3944,20 @@ select {
     .service__name-arrow {
       width: 30px;
       height: 30px; } }
-  @media (max-width: 768px) {
-    .service__name-arrow {
-      top: auto;
-      bottom: 10px; } }
-  @media (max-width: 576px) {
-    .service__name-arrow {
-      bottom: 0; } }
   .service__link:hover .service__name-arrow,
   .service__link:focus .service__name-arrow {
     background-color: #117cfb; }
+  .service__name-wrap--price .service__name-arrow {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    @media (max-width: 768px) {
+      .service__name-wrap--price .service__name-arrow {
+        top: auto;
+        bottom: 10px; } }
+    @media (max-width: 576px) {
+      .service__name-wrap--price .service__name-arrow {
+        bottom: 0; } }
 
 .service__name-icon {
   stroke: #117cfb; }
@@ -5132,6 +5176,7 @@ select {
       padding: 14px 15px 19px 10px; } }
   @media (max-width: 768px) {
     .header-catalog__name {
+      min-height: 62px;
       padding: 16px 15px 21px 13px;
       border-bottom: 1px solid #e7e7e7; } }
   .header-catalog__name:hover {
@@ -5931,6 +5976,23 @@ select {
     @media (max-width: 576px) {
       .price__item span {
         padding-left: 7px; } }
+  .price__item span span {
+    font-size: -webkit-calc( 13px + 8 * ( (100vw - 320px) / 1280 ));
+    font-size: calc( 13px + 8 * ( (100vw - 320px) / 1280 ));
+    line-height: 1.6;
+    font-weight: 700;
+    font-family: "Calibri", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
+    padding-left: 0; }
+    @media screen and (max-width: 320px) {
+      .price__item span span {
+        font-size: 13px; } }
+    @media screen and (min-width: 1600px) {
+      .price__item span span {
+        font-size: 21px; } }
+    @media (max-width: 576px) {
+      .price__item span span {
+        padding-left: 0; } }
 
 .contacts-block__title {
   margin-bottom: 35px; }

@@ -112,6 +112,11 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('clientHeight', catalogList.firstElementChild.clientHeight);
             console.log('offsetHeight', catalogListItemHeight);
             console.log('scrollHeight', catalogList.firstElementChild.scrollHeight);
+            console.log('+');
+            console.log('clientHeight', catalogList.firstElementChild.firstElementChild.clientHeight);
+            console.log('offsetHeight', catalogList.firstElementChild.firstElementChild.offsetHeight);
+            console.log('scrollHeight', catalogList.firstElementChild.firstElementChild.scrollHeight);
+            console.log('--------------------------');
             catalogListContainer.style.display = null;
 
             let columnsCount;

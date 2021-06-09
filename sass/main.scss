@@ -1,4 +1,5 @@
-@import "../font/calibri/calibri.css";
+@import "../fonts/calibri/calibri.css";
+@import "../fonts/opensans/opensans.css";
 
 // Viewport
 
@@ -234,15 +235,47 @@ select {
 }
 
 // Header
+.header {
+  position: sticky;
+  top: -40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 120px;
+  z-index: 10;
+  background-color: #ffffff;
+
+  @media (max-width: $medium) {
+    top: -36px;
+    height: 116px;
+  }
+
+  @media (max-width: $small) {
+    top: 0;
+    height: 58px;
+  }
+}
+
 .header__content {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80px;
+  z-index: 10;
+  background-color: #ffffff;
+
+  @media (max-width: $small) {
+    height: 58px;
+  }
+}
+
+.header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 36px 0;
-
-  @media (max-width: $small) {
-    padding: 9px 0;
-  }
+  width: 100%;
 }
 
 .header__menu {
@@ -361,6 +394,16 @@ select {
       display: none;
     }
   }
+
+  &:not(:last-child):nth-child(4) {
+    @media (max-width: 1200px) {
+      display: block;
+    }
+
+    @media (max-width: 1120px) {
+      display: none;
+    }
+  }
 }
 
 .header__more-button {
@@ -424,6 +467,16 @@ select {
 
   &:nth-child(n + 3) {
     @media (max-width: 850px) {
+      display: block;
+    }
+  }
+
+  &:nth-child(4) {
+    @media (max-width: 1200px) {
+      display: none;
+    }
+
+    @media (max-width: 1120px) {
       display: block;
     }
   }
@@ -1143,6 +1196,8 @@ select {
   &--right {
     background-position: 100% top;
     background-size: 66% auto;
+    background-image: linear-gradient(94.26deg, #ffffff 0%, rgba(255, 255, 255, 0) 65.46%),
+      url("../img/main-screen-right.png");
 
     @media (max-width: $x-small) {
       background-position: calc(50% + 90px) top;
@@ -1172,7 +1227,7 @@ select {
   }
 
   @media (max-width: $medium) {
-    margin: 0 auto 60px;
+    margin: 0 auto 75px;
   }
 }
 
@@ -1322,6 +1377,11 @@ select {
 
 .price-service__item-cost {
   @include main-font(24px, 20px, 1.6, 700);
+
+  span {
+    @include main-font(21px, 17px, 1.6, 700);
+    font-family: "Open Sans", "Arial", sans-serif;
+  }
 }
 
 .price-services__link {
@@ -1393,6 +1453,16 @@ select {
   @media (max-width: $small) {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  &:nth-child(n + 3) {
+    @media (max-width: $large) {
+      display: none;
+    }
+
+    @media (max-width: $small) {
+      display: block;
+    }
   }
 }
 
@@ -1618,7 +1688,7 @@ select {
 }
 
 .feedback__title {
-  @include main-font(50px, 34px, 0.9, 700);
+  @include main-font(50px, 30px, 0.9, 700);
   margin-bottom: 20px;
   color: #2255ce;
 
@@ -1808,11 +1878,15 @@ select {
   height: 350px;
 
   @media (max-width: $small) {
-    height: 250px;
+    height: 300px;
   }
 
   .container {
     height: 100%;
+
+    @media (max-width: $small) {
+      padding: 0;
+    }
   }
 }
 
@@ -1824,7 +1898,7 @@ select {
   overflow: hidden;
 
   @media (max-width: $small) {
-    border-radius: 0 0 50px 0;
+    border-radius: 0 0 20px 0;
   }
 }
 
@@ -1853,7 +1927,7 @@ select {
   }
 
   @media (max-width: $small) {
-    width: 90%;
+    width: 93%;
   }
 }
 
@@ -1870,21 +1944,18 @@ select {
 
   @media (max-width: $small) {
     margin-bottom: 8px;
+    letter-spacing: 0.28em;
   }
 }
 
 .top-info__title {
-  @include main-font(75px, 30px, 0.89, 700);
+  @include main-font(75px, 38px, 0.89, 700);
   text-transform: uppercase;
   letter-spacing: 0.01em;
   color: #131313;
 
   @media (max-width: $medium) {
     margin-bottom: 25px;
-  }
-
-  @media (max-width: $small) {
-    margin-bottom: 15px;
   }
 }
 
@@ -1899,13 +1970,13 @@ select {
 }
 
 .top-info__button {
-  @include main-font(18px, 15px, 1.2, 700);
+  @include main-font(18px, 14px, 1.2, 700);
   width: 230px;
   height: 61px;
 
   @media (max-width: $small) {
-    width: 205px;
-    height: 54px;
+    width: 200px;
+    height: 48px;
   }
 }
 
@@ -1992,12 +2063,12 @@ select {
 
   @media (max-width: $small) {
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 52px;
   }
 }
 
 .service-text__title {
-  @include main-font(80px, 40px, 0.91, 700);
+  @include main-font(80px, 28px, 0.91, 700);
   width: 90%;
   margin-bottom: 70px;
   color: #2255ce;
@@ -2027,6 +2098,11 @@ select {
 
   @media (max-width: $medium) {
     height: 8em;
+  }
+
+  @media (max-width: $small) {
+    height: 10.5em;
+    margin-bottom: 43px;
   }
 
   &::after {
@@ -2153,6 +2229,11 @@ select {
 
 .blue-banner__price-value {
   @include main-font(30px, 20px, 0.89, 700);
+
+  span {
+    @include main-font(27px, 17px, 0.89, 700);
+    font-family: "Open Sans", "Arial", sans-serif;
+  }
 }
 
 .blue-banner__title {
@@ -2235,7 +2316,7 @@ select {
   }
 
   @media (max-width: $x-small) {
-    margin: 0 auto 60px;
+    margin: 0 auto 125px;
     padding-bottom: 0;
   }
 }
@@ -2278,7 +2359,7 @@ select {
 }
 
 .advantages__title {
-  @include main-font(80px, 40px, 0.91, 700);
+  @include main-font(80px, 30px, 0.91, 700);
   margin-bottom: 35px;
   color: #2255ce;
 
@@ -2474,7 +2555,7 @@ select {
   overflow: hidden;
 
   @media (max-width: $small) {
-    border-radius: 0 0 0 50px;
+    border-radius: 0;
     width: 100%;
     height: 100%;
     margin-bottom: 38px;
@@ -2503,7 +2584,7 @@ select {
 }
 
 .step-job__title {
-  @include main-font(80px, 40px, 0.815, 700);
+  @include main-font(80px, 30px, 0.815, 700);
   margin-bottom: 45px;
   color: #2255ce;
 
@@ -2578,7 +2659,6 @@ select {
       left: 20px;
       right: auto;
       width: 305px;
-      border-radius: 0 0 0 40px;
     }
 
     @media (max-width: $x-small) {
@@ -2710,7 +2790,7 @@ select {
 }
 
 .brands__title {
-  @include main-font(80px, 40px, 0.815, 700);
+  @include main-font(80px, 30px, 0.815, 700);
   margin-bottom: 72px;
   color: #2255ce;
 
@@ -2822,7 +2902,7 @@ select {
 }
 
 .region__title {
-  @include main-font(60px, 20px, 1, 400);
+  @include main-font(60px, 30px, 1, 400);
   margin-bottom: 23px;
   color: #2255ce;
 
@@ -2850,8 +2930,9 @@ select {
   margin-bottom: 31px;
 }
 
-.region__item {
+.region__link {
   color: #333333;
+  cursor: pointer;
 
   &:hover {
     color: #2255ce;
@@ -2891,7 +2972,7 @@ select {
 }
 
 .title__name {
-  @include main-font(80px, 40px, 0.81, 700);
+  @include main-font(80px, 30px, 0.81, 700);
   width: 55%;
   color: #2255ce;
 
@@ -2900,7 +2981,7 @@ select {
   }
 
   @media (max-width: $small) {
-    width: 100%;
+    width: 94%;
   }
 
   .title--article & {
@@ -2993,18 +3074,6 @@ select {
 
   @media (max-width: $extra-large) {
     margin-bottom: 80px;
-  }
-
-  @media (max-width: $large) {
-    margin-bottom: 60px;
-  }
-
-  @media (max-width: $medium) {
-    margin-bottom: 30px;
-  }
-
-  @media (max-width: $small) {
-    margin-bottom: 55px;
   }
 }
 
@@ -3109,11 +3178,13 @@ select {
 }
 
 .service__name-wrap {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-grow: 1;
   margin-top: 25px;
+  padding-bottom: 10px;
 
   @media (max-width: $small) {
     margin-top: 12px;
@@ -3126,17 +3197,26 @@ select {
 }
 
 .service__name {
-  @include main-font(40px, 12px, 0.935, 300);
+  @include main-font(40px, 18px, 0.935, 300);
+  display: flex;
+  flex-direction: column;
   width: 70%;
   color: #000000;
 
   @media (max-width: $small) {
-    @include main-font(40px, 20px, 0.935, 300);
+    @include main-font(40px, 18px, 0.935, 300);
     width: 80%;
   }
 
   .service__name-wrap--price & {
-    width: 81%;
+    @include main-font(30px, 18px, 0.935, 300);
+    width: 80%;
+    height: 100%;
+
+    @media (max-width: $small) {
+      @include main-font(40px, 18px, 0.935, 300);
+      width: 100%;
+    }
   }
 
   .service--slider & {
@@ -3150,14 +3230,29 @@ select {
 .service__price {
   @include main-font(16px, 14px, 0.935, 300);
   display: block;
-  margin-top: 15px;
+  padding-top: 16px;
   color: #000000;
+
+  @media (max-width: $small) {
+    margin-top: auto;
+    padding-top: 10px;
+  }
+
+  @media (max-width: $x-small) {
+    padding-top: 20px;
+  }
+
+  span {
+    @include main-font(13px, 11px, 0.935, 300);
+    font-family: "Open Sans", "Arial", sans-serif;
+  }
 }
 
 .service__name-arrow {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   width: 52px;
   height: 52px;
   border-radius: 50%;
@@ -3177,6 +3272,21 @@ select {
   .service__link:hover &,
   .service__link:focus & {
     background-color: #117cfb;
+  }
+
+  .service__name-wrap--price & {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @media (max-width: $small) {
+      top: auto;
+      bottom: 10px;
+    }
+
+    @media (max-width: $x-small) {
+      bottom: 0;
+    }
   }
 }
 
@@ -3282,7 +3392,7 @@ select {
   }
 
   @media (max-width: $x-small) {
-    margin: 0 auto 15px;
+    margin: 0 auto 25px;
   }
 }
 
@@ -3298,7 +3408,7 @@ select {
 
   @media (max-width: $x-small) {
     background-size: 100% auto;
-    background-position: bottom;
+    background-position: center;
   }
 }
 
@@ -3379,7 +3489,7 @@ select {
   transition: all 0.7s ease;
 
   @media (max-width: $small) {
-    height: 6em;
+    height: 7em;
   }
 
   &::after {
@@ -3425,7 +3535,7 @@ select {
 
     @media (max-width: $small) {
       display: inline-block;
-      margin-top: 5px;
+      margin-top: 16px;
     }
   }
 
@@ -4118,6 +4228,7 @@ select {
   }
 
   @media (max-width: $small) {
+    min-height: 62px;
     padding: 16px 15px 21px 13px;
     border-bottom: 1px solid #e7e7e7;
   }
@@ -4421,6 +4532,7 @@ select {
   padding: 65px 57px 43px;
   border: 1px solid #f2f2f2;
   border-radius: 6px;
+  background-color: #ffffff;
 
   @media (max-width: $extra-large) {
     padding: 40px 30px;
@@ -4842,6 +4954,16 @@ select {
 
     @media (max-width: $x-small) {
       padding-left: 7px;
+    }
+  }
+
+  span span {
+    @include main-font(21px, 13px, 1.6, 700);
+    font-family: "Open Sans", "Arial", sans-serif;
+    padding-left: 0;
+
+    @media (max-width: $x-small) {
+      padding-left: 0;
     }
   }
 }

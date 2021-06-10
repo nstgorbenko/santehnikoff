@@ -97,26 +97,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const setHeaderCatalogHeight = () => {
         const currentScreenWidth = document.documentElement.clientWidth;
-        console.log('currentScreenWidth', currentScreenWidth);
         let catalogListsHeights = [];
 
         catalogLists.forEach((catalogList) => {
           const catalogListContainer = catalogList.closest('.header-catalog__inner-list');
           const catalogListItemsCount = catalogList.children.length;
-          console.log(catalogListItemsCount);
 
           let catalogListHeight;
           if (catalogListItemsCount) {
             catalogListContainer.style.display = 'block';
             catalogListItemHeight = catalogList.firstElementChild.offsetHeight;
-            console.log('clientHeight', catalogList.firstElementChild.clientHeight);
-            console.log('offsetHeight', catalogListItemHeight);
-            console.log('scrollHeight', catalogList.firstElementChild.scrollHeight);
-            console.log('+');
-            console.log('clientHeight', catalogList.firstElementChild.firstElementChild.clientHeight);
-            console.log('offsetHeight', catalogList.firstElementChild.firstElementChild.offsetHeight);
-            console.log('scrollHeight', catalogList.firstElementChild.firstElementChild.scrollHeight);
-            console.log('--------------------------');
             catalogListContainer.style.display = null;
 
             let columnsCount;
@@ -141,6 +131,37 @@ document.addEventListener('DOMContentLoaded', () => {
       setHeaderCatalogHeight();
       window.addEventListener('resize', setHeaderCatalogHeight);
     }
+  })();
+
+  // Header catalog work on mouseover
+  (function () {
+    const headerCatalog = document.querySelector('.header-catalog');
+
+    if (headerCatalog) {
+      let titles = headerCatalog.querySelectorAll('.header-catalog__name');
+      let innerLists = headerCatalog.querySelectorAll('.header-catalog__inner-list');
+
+      let activeTitle = titles[0];
+      let activeInnerList = innerLists[0];
+
+      activeTitle.classList.add('active');
+      activeInnerList.classList.add('active');
+
+      headerCatalog.addEventListener('mouseover', (evt) => {
+        const target = evt.target.closest('.header-catalog__name');
+        if (!target) return;
+
+        activeTitle.classList.toggle('active');
+        activeInnerList.classList.toggle('active');
+
+        activeTitle = target;
+        activeInnerList = innerLists[[...titles].indexOf(activeTitle)];
+
+        activeTitle.classList.add('active');
+        activeInnerList.classList.add('active');
+      });
+    }
+
   })();
 
   // Show more About section

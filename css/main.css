@@ -291,7 +291,11 @@ select {
   width: 100%; }
 
 .header__menu {
-  display: none; }
+  display: none;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer; }
   @media (max-width: 768px) {
     .header__menu {
       display: -webkit-box;
@@ -328,7 +332,7 @@ select {
       -ms-flex-pack: center;
           justify-content: center; }
 
-.header__menu-link.open .header__menu-link-icon {
+.header__menu-link.open .header__menu-link-icon--close {
   display: none; }
 
 .header__menu-link-icon--open {
@@ -5374,6 +5378,9 @@ select {
       font-size: 18px; } }
   .header-catalog__phone-number:hover, .header-catalog__phone-number:focus {
     text-shadow: 0 0 0.5px #117cfb, 0 0 0.5px #117cfb; }
+
+.header-catalog__button-phone {
+  margin-bottom: 40px; }
 
 .author {
   display: -webkit-box;

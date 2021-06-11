@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Сервис Sантехникоff. О компании</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/animate.min.css">
 </head>
 
 <body>
@@ -356,7 +356,7 @@
         <div class="title">
           <p class="title__name">Наши сотрудники</p>
           <div class="title__links">
-            <a class="title__link title__link--left" href="#">
+            <a class="title__link title__link--left staff__link-left" href="#">
               <span class="title__link-arrow">
                 <svg class="title__link-icon" width="23" height="16" viewBox="0 0 23 16" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -365,7 +365,7 @@
                 </svg>
               </span>
             </a>
-            <a class="title__link" href="#">
+            <a class="title__link staff__link-right" href="#">
               <span class="title__link-arrow">
                 <svg class="title__link-icon" width="23" height="16" viewBox="0 0 23 16" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -375,10 +375,13 @@
               </span>
             </a>
           </div>
+          <div class="title__drag">
+            <img class="title__drag-image" src="./img/drag.gif" alt="">
+          </div>
         </div>
-        <div class="staff__content">
-          <ul class="staff__list">
-            <li class="staff__item">
+        <div class="staff__content swiper-container">
+          <ul class="staff__list swiper-wrapper">
+            <li class="staff__item swiper-slide">
               <article class="staff-person">
                 <p class="staff-person__experience">Опыт 9 лет</p>
                 <p class="staff-person__name">Иван Иванов</p>
@@ -387,7 +390,7 @@
                 </div>
               </article>
             </li>
-            <li class="staff__item">
+            <li class="staff__item swiper-slide">
               <article class="staff-person">
                 <p class="staff-person__experience">Опыт 10 лет</p>
                 <p class="staff-person__name">Петр Осипов</p>
@@ -396,7 +399,7 @@
                 </div>
               </article>
             </li>
-            <li class="staff__item">
+            <li class="staff__item swiper-slide">
               <article class="staff-person">
                 <p class="staff-person__experience">Опыт 5 лет</p>
                 <p class="staff-person__name">Виктор Горбунов</p>
@@ -405,7 +408,7 @@
                 </div>
               </article>
             </li>
-            <li class="staff__item">
+            <li class="staff__item swiper-slide">
               <article class="staff-person">
                 <p class="staff-person__experience">Опыт 6 лет</p>
                 <p class="staff-person__name">Павел Гагарин</p>
@@ -725,6 +728,7 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="./js/main.js"></script>
 </body>
 

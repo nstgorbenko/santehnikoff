@@ -78,61 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })();
 
-  // Header catalog height
-  (function () {
-    const headerCatalog = document.querySelector('.header-catalog__inner');
-
-    if (headerCatalog) {
-      const ScreenWidth = {
-        DESKTOP: 1400,
-        TABLET: 992,
-      };
-      const ColumnsCount = {
-        DESKTOP: 3,
-        TABLET: 2,
-        MOBILE: 1,
-      }
-
-      const catalogLists = headerCatalog.querySelectorAll('.header-catalog__sublist');
-
-      const setHeaderCatalogHeight = () => {
-        const currentScreenWidth = document.documentElement.clientWidth;
-        let catalogListsHeights = [];
-
-        catalogLists.forEach((catalogList) => {
-          const catalogListContainer = catalogList.closest('.header-catalog__inner-list');
-          const catalogListItemsCount = catalogList.children.length;
-
-          let catalogListHeight;
-          if (catalogListItemsCount) {
-            catalogListContainer.style.display = 'block';
-            catalogListItemHeight = catalogList.firstElementChild.offsetHeight;
-            catalogListContainer.style.display = null;
-
-            let columnsCount;
-            if (currentScreenWidth > ScreenWidth.DESKTOP) {
-              columnsCount = ColumnsCount.DESKTOP;
-            } else if (currentScreenWidth > ScreenWidth.TABLET) {
-              columnsCount = ColumnsCount.TABLET;
-            } else {
-              columnsCount = ColumnsCount.MOBILE;
-            }
-
-            catalogListHeight = Math.ceil(catalogListItemsCount / columnsCount) * catalogListItemHeight;
-          } else {
-            catalogListHeight = 0;
-          }
-          catalogListsHeights.push(catalogListHeight);
-        });
-
-        headerCatalog.style.height = `${Math.max(...catalogListsHeights)}px`
-      }
-
-      setHeaderCatalogHeight();
-      window.addEventListener('resize', setHeaderCatalogHeight);
-    }
-  })();
-
   // Header catalog work on mouseover
   (function () {
     const headerCatalog = document.querySelector('.header-catalog');
@@ -199,6 +144,120 @@ document.addEventListener('DOMContentLoaded', () => {
           showMoreButton.remove();
         })
       }
+    }
+  })();
+
+  // Init staff slider
+  (function () {
+    const staffSection = document.querySelector('.staff');
+
+    if (staffSection) {
+      return new Swiper('.staff__content', {
+        slidesPerView: 2.3,
+        spaceBetween: 15,
+        navigation: {
+          prevEl: '.staff__link-left',
+          nextEl: '.staff__link-right',
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 25,
+          },
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        },
+        grabCursor: true,
+        loop: true,
+      });
+    }
+  })();
+
+  // Init service slider
+  (function () {
+    const serviceSection = document.querySelector('.service--slider');
+
+    if (serviceSection) {
+      return new Swiper('.service__content', {
+        slidesPerView: 2.3,
+        spaceBetween: 15,
+        navigation: {
+          prevEl: '.service__link-left',
+          nextEl: '.service__link-right',
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 25,
+          },
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        },
+        grabCursor: true,
+        loop: true,
+      });
+    }
+  })();
+});
+
+
+window.addEventListener('load', () => {
+  // Header catalog height
+  (function () {
+    const headerCatalog = document.querySelector('.header-catalog__inner');
+
+    if (headerCatalog) {
+      const ScreenWidth = {
+        DESKTOP: 1400,
+        TABLET: 992,
+      };
+      const ColumnsCount = {
+        DESKTOP: 3,
+        TABLET: 2,
+        MOBILE: 1,
+      }
+
+      const catalogLists = headerCatalog.querySelectorAll('.header-catalog__sublist');
+
+      const setHeaderCatalogHeight = () => {
+        const currentScreenWidth = document.documentElement.clientWidth;
+        let catalogListsHeights = [];
+
+        catalogLists.forEach((catalogList) => {
+          const catalogListContainer = catalogList.closest('.header-catalog__inner-list');
+          const catalogListItemsCount = catalogList.children.length;
+
+          let catalogListHeight;
+          if (catalogListItemsCount) {
+            catalogListContainer.style.display = 'block';
+            catalogListItemHeight = catalogList.firstElementChild.offsetHeight;
+            catalogListContainer.style.display = null;
+
+            let columnsCount;
+            if (currentScreenWidth > ScreenWidth.DESKTOP) {
+              columnsCount = ColumnsCount.DESKTOP;
+            } else if (currentScreenWidth > ScreenWidth.TABLET) {
+              columnsCount = ColumnsCount.TABLET;
+            } else {
+              columnsCount = ColumnsCount.MOBILE;
+            }
+
+            catalogListHeight = Math.ceil(catalogListItemsCount / columnsCount) * catalogListItemHeight;
+          } else {
+            catalogListHeight = 0;
+          }
+          catalogListsHeights.push(catalogListHeight);
+        });
+
+        headerCatalog.style.height = `${Math.max(...catalogListsHeights)}px`
+      }
+
+      setHeaderCatalogHeight();
+      window.addEventListener('resize', setHeaderCatalogHeight);
     }
   })();
 });

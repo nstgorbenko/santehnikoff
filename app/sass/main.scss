@@ -5254,6 +5254,12 @@ a.contacts__data:focus {
   height: 100%;
 }
 
+.header-catalog-list__nav-item {
+  &:last-child {
+    padding-bottom: 100px;
+  }
+}
+
 .header-catalog-list__nav-link {
   @include main-font(18px, 18px, 1, 300);
   display: block;

@@ -1555,7 +1555,7 @@ select {
     line-height: 1.6;
     font-weight: 700;
     font-family: "Calibri", sans-serif;
-    font-family: "Open Sans", "Arial", sans-serif; }
+    font-family: "Helvetica Neue", sans-serif; }
     @media screen and (max-width: 320px) {
       .price-service__item-cost span {
         font-size: 17px; } }
@@ -2589,7 +2589,7 @@ select {
     line-height: 0.89;
     font-weight: 700;
     font-family: "Calibri", sans-serif;
-    font-family: "Open Sans", "Arial", sans-serif; }
+    font-family: "Helvetica Neue", sans-serif; }
     @media screen and (max-width: 320px) {
       .blue-banner__price-value span {
         font-size: 17px; } }
@@ -3849,7 +3849,7 @@ select {
     line-height: 0.935;
     font-weight: 300;
     font-family: "Calibri", sans-serif;
-    font-family: "Open Sans", "Arial", sans-serif; }
+    font-family: "Helvetica Neue", sans-serif; }
     @media screen and (max-width: 320px) {
       .service__price span {
         font-size: 11px; } }
@@ -5992,7 +5992,7 @@ select {
     line-height: 1.6;
     font-weight: 700;
     font-family: "Calibri", sans-serif;
-    font-family: "Open Sans", "Arial", sans-serif;
+    font-family: "Helvetica Neue", sans-serif;
     padding-left: 0; }
     @media screen and (max-width: 320px) {
       .price__item span span {

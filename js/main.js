@@ -78,6 +78,61 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })();
 
+  // Header catalog height
+  (function () {
+    const headerCatalog = document.querySelector('.header-catalog__inner');
+
+    if (headerCatalog) {
+      const ScreenWidth = {
+        DESKTOP: 1400,
+        TABLET: 992,
+      };
+      const ColumnsCount = {
+        DESKTOP: 3,
+        TABLET: 2,
+        MOBILE: 1,
+      }
+
+      const catalogLists = headerCatalog.querySelectorAll('.header-catalog__sublist');
+
+      const setHeaderCatalogHeight = () => {
+        const currentScreenWidth = document.documentElement.clientWidth;
+        let catalogListsHeights = [];
+
+        catalogLists.forEach((catalogList) => {
+          const catalogListContainer = catalogList.closest('.header-catalog__inner-list');
+          const catalogListItemsCount = catalogList.children.length;
+
+          let catalogListHeight;
+          if (catalogListItemsCount) {
+            catalogListContainer.style.display = 'block';
+            catalogListItemHeight = catalogList.firstElementChild.offsetHeight;
+            catalogListContainer.style.display = null;
+
+            let columnsCount;
+            if (currentScreenWidth > ScreenWidth.DESKTOP) {
+              columnsCount = ColumnsCount.DESKTOP;
+            } else if (currentScreenWidth > ScreenWidth.TABLET) {
+              columnsCount = ColumnsCount.TABLET;
+            } else {
+              columnsCount = ColumnsCount.MOBILE;
+            }
+
+            catalogListHeight = Math.ceil(catalogListItemsCount / columnsCount) * catalogListItemHeight;
+          } else {
+            catalogListHeight = 0;
+          }
+          catalogListsHeights.push(catalogListHeight);
+        });
+
+        headerCatalog.style.height = `${Math.max(...catalogListsHeights)}px`
+      }
+
+      setHeaderCatalogHeight();
+      window.addEventListener('resize', setHeaderCatalogHeight);
+    }
+  })();
+
   // Header catalog work on mouseover
   (function () {
     const headerCatalog = document.querySelector('.header-catalog');
@@ -130,20 +185,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Show more Service-text section
   (function () {
-    const aboutSection = document.querySelector('.service-text');
+    const aboutSections = document.querySelectorAll('.service-text');
 
-    if (aboutSection) {
-      const showMoreButton = document.querySelector('.service-text__button--more');
-      if (showMoreButton) {
-        const textContainer = document.querySelector('.service-text__text');
+    if (aboutSections) {
+      aboutSections.forEach((aboutSection) => {
+        const showMoreButton = aboutSection.querySelector('.service-text__button--more');
 
-        showMoreButton.addEventListener('click', (evt) => {
-          evt.preventDefault();
-          textContainer.style.height = `${textContainer.scrollHeight}px`;
-          textContainer.classList.add('show');
-          showMoreButton.remove();
-        })
-      }
+        if (showMoreButton) {
+          const textContainer = aboutSection.querySelector('.service-text__text');
+
+          showMoreButton.addEventListener('click', (evt) => {
+            evt.preventDefault();
+            textContainer.style.height = `${textContainer.scrollHeight}px`;
+            textContainer.classList.add('show');
+            showMoreButton.remove();
+          })
+        }
+      });
     }
   })();
 
@@ -200,64 +258,6 @@ document.addEventListener('DOMContentLoaded', () => {
         grabCursor: true,
         loop: true,
       });
-    }
-  })();
-});
-
-
-window.addEventListener('load', () => {
-  // Header catalog height
-  (function () {
-    const headerCatalog = document.querySelector('.header-catalog__inner');
-
-    if (headerCatalog) {
-      const ScreenWidth = {
-        DESKTOP: 1400,
-        TABLET: 992,
-      };
-      const ColumnsCount = {
-        DESKTOP: 3,
-        TABLET: 2,
-        MOBILE: 1,
-      }
-
-      const catalogLists = headerCatalog.querySelectorAll('.header-catalog__sublist');
-
-      const setHeaderCatalogHeight = () => {
-        const currentScreenWidth = document.documentElement.clientWidth;
-        let catalogListsHeights = [];
-
-        catalogLists.forEach((catalogList) => {
-          const catalogListContainer = catalogList.closest('.header-catalog__inner-list');
-          const catalogListItemsCount = catalogList.children.length;
-
-          let catalogListHeight;
-          if (catalogListItemsCount) {
-            catalogListContainer.style.display = 'block';
-            catalogListItemHeight = catalogList.firstElementChild.offsetHeight;
-            catalogListContainer.style.display = null;
-
-            let columnsCount;
-            if (currentScreenWidth > ScreenWidth.DESKTOP) {
-              columnsCount = ColumnsCount.DESKTOP;
-            } else if (currentScreenWidth > ScreenWidth.TABLET) {
-              columnsCount = ColumnsCount.TABLET;
-            } else {
-              columnsCount = ColumnsCount.MOBILE;
-            }
-
-            catalogListHeight = Math.ceil(catalogListItemsCount / columnsCount) * catalogListItemHeight;
-          } else {
-            catalogListHeight = 0;
-          }
-          catalogListsHeights.push(catalogListHeight);
-        });
-
-        headerCatalog.style.height = `${Math.max(...catalogListsHeights)}px`
-      }
-
-      setHeaderCatalogHeight();
-      window.addEventListener('resize', setHeaderCatalogHeight);
     }
   })();
 });

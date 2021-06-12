@@ -281,6 +281,8 @@ select {
 
 .header__menu {
   display: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
 
   @media (max-width: $small) {
     display: flex;
@@ -305,8 +307,10 @@ select {
 }
 
 .header__menu-link-icon {
-  .header__menu-link.open & {
-    display: none;
+  &--close {
+    .header__menu-link.open & {
+      display: none;
+    }
   }
 
   &--open {
@@ -4437,6 +4441,10 @@ select {
     text-shadow: 0 0 0.5px #117cfb, 0 0 0.5px #117cfb;
   }
 }
+
+.header-catalog__button-phone {
+  margin-bottom: 40px;
+}
 // Section Article
 
 .author {
@@ -5248,6 +5256,12 @@ a.contacts__data:focus {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.header-catalog-list__nav-item {
+  &:last-child {
+    padding-bottom: 100px;
+  }
 }
 
 .header-catalog-list__nav-link {

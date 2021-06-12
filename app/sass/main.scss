@@ -1,5 +1,4 @@
 @import "../fonts/calibri/calibri.css";
-@import "../fonts/opensans/opensans.css";
 
 // Viewport
 
@@ -1391,7 +1390,6 @@ select {
 
   span {
     @include main-font(21px, 17px, 1.6, 700);
-    // font-family: "Open Sans", "Arial", sans-serif;
     font-family: "Helvetica Neue", sans-serif;
   }
 }
@@ -2211,7 +2209,6 @@ select {
 
   span {
     @include main-font(27px, 17px, 0.89, 700);
-    // font-family: "Open Sans", "Arial", sans-serif;
     font-family: "Helvetica Neue", sans-serif;
   }
 }
@@ -3206,7 +3203,6 @@ select {
 
   span {
     @include main-font(13px, 11px, 0.935, 300);
-    // font-family: "Open Sans", "Arial", sans-serif;
     font-family: "Helvetica Neue", sans-serif;
   }
 }
@@ -4979,7 +4975,6 @@ select {
 
   span span {
     @include main-font(21px, 13px, 1.6, 700);
-    // font-family: "Open Sans", "Arial", sans-serif;
     font-family: "Helvetica Neue", sans-serif;
     padding-left: 0;
 
